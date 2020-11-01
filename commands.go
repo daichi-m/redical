@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/c-bata/go-prompt"
-	"github.com/daichi-m/prompter/assets"
+	"github.com/daichi-m/redical/assets"
 )
 
 // TODO: Better documentation comments

@@ -1,4 +1,4 @@
-module github.com/daichi-m/prompter
+module github.com/daichi-m/redical
 
 go 1.14
 
