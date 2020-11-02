@@ -95,9 +95,6 @@ func (cl *CommandList) InitSuggests() error {
 	return nil
 }
 
-// supported is the list of supported redis commands
-var supported CommandList
-
 // InitCmds initializes the list of redis commands supported by redical
 func InitCmds() error {
 	data, err := assets.Asset("resources/redis-commands-golang.json")
@@ -105,10 +102,10 @@ func InitCmds() error {
 		return err
 	}
 
-	if err = json.Unmarshal(data, &supported); err != nil {
+	if err = json.Unmarshal(data, &global.supported); err != nil {
 		return err
 	}
-	if err = supported.InitSuggests(); err != nil {
+	if err = global.supported.InitSuggests(); err != nil {
 		return err
 	}
 

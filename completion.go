@@ -17,7 +17,7 @@ E.g., if user enters `AC` suggestions comes up as `ACL LOAD`, `ACL LOG`, `ACL SA
 but once user enters `ACL L` suggestions changes to `LOAD`, `LOG` and `LIST` only.
 */
 func CmdSuggestions(d prompt.Document) []prompt.Suggest {
-	cmds := supported.completions
+	cmds := global.supported.completions
 	full := strings.ToUpper(d.TextBeforeCursor())
 	curr := strings.ToUpper(d.GetWordBeforeCursor())
 	parts := splitter.Split(full, -1)

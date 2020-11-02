@@ -18,12 +18,6 @@ var logFile io.WriteCloser
 
 // SetupLogger sets up the logging params
 func SetupLogger() error {
-	// logFile, err := os.OpenFile("logs/prompter.log",
-	// 	os.O_APPEND|os.O_CREATE|os.O_WRONLY,
-	// 	0644)
-	// if err != nil {
-	// 	return err
-	// }
 
 	logFile = &lumberjack.Logger{
 		Filename:   "logs/redical.log",
