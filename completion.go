@@ -9,7 +9,14 @@ import (
 
 var splitter *regexp.Regexp = regexp.MustCompile("\\s+")
 
-func completer(d prompt.Document) []prompt.Suggest {
+/*
+CmdSuggestions returns the list of suggestions based on the current input.
+In case of multi word commands like ACL and LATENCY, it splits the input into two parts
+and tries to filter based on the current word that is being input.
+E.g., if user enters `AC` suggestions comes up as `ACL LOAD`, `ACL LOG`, `ACL SAVE`, `ACL LIST` etc.
+but once user enters `ACL L` suggestions changes to `LOAD`, `LOG` and `LIST` only.
+*/
+func CmdSuggestions(d prompt.Document) []prompt.Suggest {
 	cmds := supported.completions
 	full := strings.ToUpper(d.TextBeforeCursor())
 	curr := strings.ToUpper(d.GetWordBeforeCursor())
@@ -27,13 +34,13 @@ func completer(d prompt.Document) []prompt.Suggest {
 	if !spaced {
 		logger.Printf("Full Input: %s, Current Word: %s, IsSpaced: %t, Filtered Suggestions: %#v\n",
 			full, curr, spaced, LogSafeSlice(filt))
-		return isComplete(filt, full)
+		return filterComplete(filt, full)
 	}
-	modFilt := filterMulti(filt, full, curr, parts)
-	return isComplete(modFilt, parts[len(parts)-1])
+	modFilt := filterMultiWord(filt, full, curr, parts)
+	return filterComplete(modFilt, parts[len(parts)-1])
 }
 
-func filterMulti(filt []prompt.Suggest, full, current string, parts []string) []prompt.Suggest {
+func filterMultiWord(filt []prompt.Suggest, full, current string, parts []string) []prompt.Suggest {
 	spaced := len(parts) > 1
 	var prefix string
 
@@ -54,7 +61,7 @@ func filterMulti(filt []prompt.Suggest, full, current string, parts []string) []
 	return modFilt
 }
 
-func isComplete(filt []prompt.Suggest, txt string) []prompt.Suggest {
+func filterComplete(filt []prompt.Suggest, txt string) []prompt.Suggest {
 	if len(filt) != 1 {
 		return filt
 	}
