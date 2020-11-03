@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 	"time"
 
 	"github.com/gomodule/redigo/redis"
@@ -10,8 +11,8 @@ import (
 
 // DBConfig is the struct that encapsulates the user inputs
 type DBConfig struct {
-	host, user, password, client                     string
-	port, db                                         int
+	host, username, password, client                 string
+	port, database                                   int
 	timeout, connectTO, readTO, writeTO, keepAliveTO time.Duration
 	tls, skipVerifyTLS, debug                        bool
 }
@@ -42,8 +43,8 @@ func ParseConfig() DBConfig {
 	conf := DBConfig{
 		host:          *host,
 		port:          *port,
-		db:            *db,
-		user:          *user,
+		database:      *db,
+		username:      *user,
 		password:      *password,
 		timeout:       *timeout,
 		connectTO:     *connectTO,
@@ -71,12 +72,12 @@ func (db *DBConfig) InitializeRedis() (redis.Conn, error) {
 func (db *DBConfig) createDialOpts() []redis.DialOption {
 	var dialOpts []redis.DialOption
 
-	dialOpts = append(dialOpts, redis.DialDatabase(db.db))
+	dialOpts = append(dialOpts, redis.DialDatabase(db.database))
 	if len(db.password) > 0 {
 		dialOpts = append(dialOpts, redis.DialPassword(db.password))
 	}
-	if len(db.user) > 0 {
-		dialOpts = append(dialOpts, redis.DialUsername(db.user))
+	if len(db.username) > 0 {
+		dialOpts = append(dialOpts, redis.DialUsername(db.username))
 	}
 
 	dialOpts = append(dialOpts, redis.DialConnectTimeout(db.connectTO))
@@ -99,14 +100,17 @@ picks up all the non-zero values from other and assigns them to the
 corresponding field in this DBConfig object
 */
 func (db *DBConfig) Merge(other *DBConfig) {
+
+	logger.Debug("Request to merge config: %v", other)
+
 	if other.host != "" {
 		db.host = other.host
 	}
 	if other.port != 0 {
 		db.port = other.port
 	}
-	if other.user != "" {
-		db.user = other.user
+	if other.username != "" {
+		db.username = other.username
 	}
 	if other.password != "" {
 		db.password = other.password
@@ -135,4 +139,42 @@ func (db *DBConfig) Merge(other *DBConfig) {
 	if other.skipVerifyTLS == true {
 		db.skipVerifyTLS = true
 	}
+	logger.Info("Merged DBConfig: %v", db)
+}
+
+func (db *DBConfig) String() string {
+	var sb strings.Builder = strings.Builder{}
+
+	sb.WriteString(
+		fmt.Sprintf("Redis: tcp://%s:%d/%d", db.host, db.port, db.database))
+	sb.WriteString(
+		fmt.Sprintf(" User:Pass: %s:%s", db.username, "****(Redacted)"))
+	sb.WriteString(
+		fmt.Sprintf(" Timeouts: %v, Read: %v, Write: %v, Connect: %v, KeepAlive: %v",
+			db.timeout, db.readTO, db.writeTO, db.connectTO, db.keepAliveTO))
+	sb.WriteString(
+		fmt.Sprintf(" TLS: %v, SkipVerification: %v", db.tls, db.skipVerifyTLS))
+	sb.WriteString(
+		fmt.Sprintf(" Client: %s", db.client))
+	return sb.String()
+}
+
+// RedicalConf is the global configuration struct to encapsulate all global parameters
+type RedicalConf struct {
+	config    DBConfig
+	supported CommandList
+	redis     *redis.Conn
+}
+
+// ModifyConfig modifies the DBConfig for redis and refreshes the global redis client.
+func (rc *RedicalConf) ModifyConfig(mod *DBConfig) error {
+	tmp := rc.config
+	rc.config.Merge(mod)
+	r, err := rc.config.InitializeRedis()
+	if err != nil {
+		rc.config = tmp
+		return err
+	}
+	rc.redis = &r
+	return nil
 }

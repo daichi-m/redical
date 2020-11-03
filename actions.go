@@ -7,3 +7,11 @@ func Auth(password string) error {
 	}
 	return nil
 }
+
+// Select action changes the database of the redis connection and refreshes it.
+func Select(db int) error {
+	if err := global.ModifyConfig(&DBConfig{database: db}); err != nil {
+		return err
+	}
+	return nil
+}
