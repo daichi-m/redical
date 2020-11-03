@@ -58,7 +58,8 @@ func ParseConfig() DBConfig {
 	return conf
 }
 
-/*InitializeRedis initializes the redigo/redis client at startup based on the CLI
+/*
+InitializeRedis initializes the redigo/redis client at startup based on the CLI
 inputs in the DBConfig
 */
 func (db *DBConfig) InitializeRedis() (redis.Conn, error) {
@@ -90,4 +91,48 @@ func (db *DBConfig) createDialOpts() []redis.DialOption {
 		dialOpts = append(dialOpts, redis.DialClientName(db.client))
 	}
 	return dialOpts
+}
+
+/*
+Merge this instance of DBConfig with another DBConfig. This function
+picks up all the non-zero values from other and assigns them to the
+corresponding field in this DBConfig object
+*/
+func (db *DBConfig) Merge(other *DBConfig) {
+	if other.host != "" {
+		db.host = other.host
+	}
+	if other.port != 0 {
+		db.port = other.port
+	}
+	if other.user != "" {
+		db.user = other.user
+	}
+	if other.password != "" {
+		db.password = other.password
+	}
+	if other.client != "" {
+		db.client = other.client
+	}
+	if other.timeout != 0 {
+		db.timeout = other.timeout
+	}
+	if other.readTO != 0 {
+		db.readTO = other.readTO
+	}
+	if other.writeTO != 0 {
+		db.writeTO = other.writeTO
+	}
+	if other.connectTO != 0 {
+		db.connectTO = other.connectTO
+	}
+	if other.keepAliveTO != 0 {
+		db.keepAliveTO = other.keepAliveTO
+	}
+	if other.tls == true {
+		db.tls = true
+	}
+	if other.skipVerifyTLS == true {
+		db.skipVerifyTLS = true
+	}
 }

@@ -4,26 +4,7 @@ import (
 	"fmt"
 
 	"github.com/c-bata/go-prompt"
-	"github.com/gomodule/redigo/redis"
 )
-
-// RedicalConf is the global configuration struct to encapsulate all global parameters
-type RedicalConf struct {
-	config    DBConfig
-	supported CommandList
-	redis     *redis.Conn
-}
-
-// ModifyConfig modifies the DBConfig for redis and refreshes the global redis client.
-func (rc *RedicalConf) ModifyConfig(config DBConfig) error {
-	rc.config = config
-	r, err := config.InitializeRedis()
-	if err != nil {
-		return err
-	}
-	rc.redis = &r
-	return nil
-}
 
 // global is the global RedicalConf object to store all global parameters
 var global RedicalConf
@@ -73,6 +54,6 @@ func livePrefix() (string, bool) {
 }
 
 func action(txt string) {
-	logger.Println("Received input for action ", txt)
+	logger.Debug("Received input for action %s", txt)
 	fmt.Println(txt)
 }

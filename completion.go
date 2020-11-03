@@ -26,13 +26,13 @@ func CmdSuggestions(d prompt.Document) []prompt.Suggest {
 	spaced := len(parts) > 1
 
 	if len(full) == 0 {
-		logger.Println("Input empty returning empty suggest")
+		logger.Debug("Input empty returning empty suggest")
 		return []prompt.Suggest{}
 	}
 
 	filt := prompt.FilterHasPrefix(cmds, full, true)
 	if !spaced {
-		logger.Printf("Full Input: %s, Current Word: %s, IsSpaced: %t, Filtered Suggestions: %#v\n",
+		logger.Debug("Full Input: %s, Current Word: %s, IsSpaced: %t, Filtered Suggestions: %#v\n",
 			full, curr, spaced, LogSafeSlice(filt))
 		return filterComplete(filt, full)
 	}
@@ -56,7 +56,7 @@ func filterMultiWord(filt []prompt.Suggest, full, current string, parts []string
 		modFilt = append(modFilt, sugg)
 	}
 	modFilt = prompt.FilterHasPrefix(modFilt, current, true)
-	logger.Printf("Full Input: %s, Current Word: %s, Prefix: %s, IsSpaced: %t, Filtered Suggestions: %#v\n",
+	logger.Debug("Full Input: %s, Current Word: %s, Prefix: %s, IsSpaced: %t, Filtered Suggestions: %#v\n",
 		full, current, prefix, spaced, LogSafeSlice(modFilt))
 	return modFilt
 }
@@ -67,7 +67,7 @@ func filterComplete(filt []prompt.Suggest, txt string) []prompt.Suggest {
 	}
 
 	filt1 := filt[0]
-	logger.Printf("Suggestions: %#v, Full Text: %s\n", filt, txt)
+	logger.Debug("Suggestions: %#v, Full Text: %s\n", filt, txt)
 	if filt1.Text == txt {
 		return []prompt.Suggest{}
 	}
