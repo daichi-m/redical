@@ -13,18 +13,24 @@ func main() {
 
 	var err error
 	global = RedicalConf{}
+	global.config = ParseConfig()
 
 	if err = SetupLogger(); err != nil {
 		panic("Could not set up logging")
 	}
 	defer TearDownLogger()
+	logger.Info("Logger initialized")
+
+	r, err := global.config.InitializeRedis()
+	if err != nil {
+		panic("Redis could not be initialized")
+	}
+	global.redis = &r
+	logger.Info("CLI inputs parsed and redis-client initialized")
 
 	InitCmds()
-	ParseConfig()
-	r, err := global.config.InitializeRedis()
-	global.redis = &r
-
 	p := SetupPrompt()
+	logger.Info("Prompt setup complete, initialize prompt now")
 	p.Run()
 
 }

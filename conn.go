@@ -1,8 +1,8 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
-	"strings"
 	"time"
 
 	"github.com/gomodule/redigo/redis"
@@ -91,6 +91,7 @@ func (db *DBConfig) createDialOpts() []redis.DialOption {
 	if len(db.client) > 0 {
 		dialOpts = append(dialOpts, redis.DialClientName(db.client))
 	}
+	logger.Info("Create redis with options: %v", db)
 	return dialOpts
 }
 
@@ -143,20 +144,21 @@ func (db *DBConfig) Merge(other *DBConfig) {
 }
 
 func (db *DBConfig) String() string {
-	var sb strings.Builder = strings.Builder{}
+	var x map[string]string = make(map[string]string)
 
-	sb.WriteString(
-		fmt.Sprintf("Redis: tcp://%s:%d/%d", db.host, db.port, db.database))
-	sb.WriteString(
-		fmt.Sprintf(" User:Pass: %s:%s", db.username, "****(Redacted)"))
-	sb.WriteString(
-		fmt.Sprintf(" Timeouts: %v, Read: %v, Write: %v, Connect: %v, KeepAlive: %v",
-			db.timeout, db.readTO, db.writeTO, db.connectTO, db.keepAliveTO))
-	sb.WriteString(
-		fmt.Sprintf(" TLS: %v, SkipVerification: %v", db.tls, db.skipVerifyTLS))
-	sb.WriteString(
-		fmt.Sprintf(" Client: %s", db.client))
-	return sb.String()
+	x["redis"] = fmt.Sprintf("tcp://%s:%d/%d", db.host, db.port, db.database)
+	x["credentials"] = fmt.Sprintf("%s:%s", db.username, "****(Redacted)")
+	x["timeouts"] = fmt.Sprintf("%v", db.timeout)
+	x["connect-timeout"] = fmt.Sprintf("%v", db.connectTO)
+	x["read-timeout"] = fmt.Sprintf("%v", db.readTO)
+	x["write-timeout"] = fmt.Sprintf("%v", db.writeTO)
+	x["keep-alive-timeout"] = fmt.Sprintf("%v", db.keepAliveTO)
+	x["client"] = db.client
+	x["tls"] = fmt.Sprintf("%v", db.tls)
+	x["tls-verify"] = fmt.Sprintf("%v", !db.skipVerifyTLS)
+
+	j, _ := json.Marshal(x)
+	return string(j)
 }
 
 // RedicalConf is the global configuration struct to encapsulate all global parameters
@@ -176,5 +178,6 @@ func (rc *RedicalConf) ModifyConfig(mod *DBConfig) error {
 		return err
 	}
 	rc.redis = &r
+	logger.Info("Redis client re-initialized with modified config %v", mod)
 	return nil
 }

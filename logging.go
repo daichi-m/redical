@@ -77,7 +77,11 @@ func SetupLogger() error {
 		With().
 		Caller().
 		Stack().
-		Logger()
+		Logger().
+		Level(zerolog.DebugLevel)
+	if !global.config.debug {
+		zl = zl.Level(zerolog.InfoLevel)
+	}
 	logger = Logger(zl)
 	return nil
 }
