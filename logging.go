@@ -78,9 +78,12 @@ func SetupLogger() error {
 		Caller().
 		Stack().
 		Logger().
-		Level(zerolog.DebugLevel)
-	if !global.config.debug {
-		zl = zl.Level(zerolog.InfoLevel)
+		Level(zerolog.InfoLevel)
+	if global.redisDB.debug {
+		zl = zl.Level(zerolog.DebugLevel)
+	}
+	if global.redisDB.prod {
+		zl = zl.Level(zerolog.WarnLevel)
 	}
 	logger = Logger(zl)
 	return nil

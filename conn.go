@@ -14,7 +14,13 @@ type DBConfig struct {
 	host, username, password, client                 string
 	port, database                                   int
 	timeout, connectTO, readTO, writeTO, keepAliveTO time.Duration
-	tls, skipVerifyTLS, debug                        bool
+	tls, skipVerifyTLS, debug, prod                  bool
+}
+
+// RedisDB is an instance of redis database
+type RedisDB struct {
+	DBConfig
+	redisConn redis.Conn
 }
 
 // ParseConfig parses the input flags and initializes the global Input struct
@@ -37,6 +43,7 @@ func ParseConfig() DBConfig {
 	clName := flag.StringP("client", "c", "", "Client name")
 
 	debug := flag.Bool("debug", false, "Run in debug mode")
+	prod := flag.Bool("prod", false, "Run in production mode")
 
 	flag.Parse()
 
@@ -55,6 +62,7 @@ func ParseConfig() DBConfig {
 		skipVerifyTLS: *skipTLS,
 		client:        *clName,
 		debug:         *debug,
+		prod:          *prod,
 	}
 	return conf
 }
@@ -63,13 +71,23 @@ func ParseConfig() DBConfig {
 InitializeRedis initializes the redigo/redis client at startup based on the CLI
 inputs in the DBConfig
 */
-func (db *DBConfig) InitializeRedis() (redis.Conn, error) {
+func (db *RedisDB) InitializeRedis() error {
 	dialOpts := db.createDialOpts()
 	address := fmt.Sprintf("%s:%d", db.host, db.port)
-	return redis.Dial("tcp", address, dialOpts...)
+	r, err := redis.Dial("tcp", address, dialOpts...)
+	if err != nil {
+		return err
+	}
+	db.redisConn = r
+	return nil
 }
 
-func (db *DBConfig) createDialOpts() []redis.DialOption {
+// TearDownRedis tears down the redis connection
+func (db *RedisDB) TearDownRedis() {
+	db.redisConn.Close()
+}
+
+func (db *RedisDB) createDialOpts() []redis.DialOption {
 	var dialOpts []redis.DialOption
 
 	dialOpts = append(dialOpts, redis.DialDatabase(db.database))
@@ -163,21 +181,18 @@ func (db *DBConfig) String() string {
 
 // RedicalConf is the global configuration struct to encapsulate all global parameters
 type RedicalConf struct {
-	config    DBConfig
+	redisDB   RedisDB
 	supported CommandList
-	redis     *redis.Conn
 }
 
 // ModifyConfig modifies the DBConfig for redis and refreshes the global redis client.
 func (rc *RedicalConf) ModifyConfig(mod *DBConfig) error {
-	tmp := rc.config
-	rc.config.Merge(mod)
-	r, err := rc.config.InitializeRedis()
-	if err != nil {
-		rc.config = tmp
+	tmp := rc.redisDB
+	rc.redisDB.Merge(mod)
+	if err := rc.redisDB.InitializeRedis(); err != nil {
+		rc.redisDB = tmp
 		return err
 	}
-	rc.redis = &r
 	logger.Info("Redis client re-initialized with modified config %v", mod)
 	return nil
 }

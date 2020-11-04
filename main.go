@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/c-bata/go-prompt"
+	"github.com/fatih/color"
 )
 
 // global is the global RedicalConf object to store all global parameters
@@ -11,9 +12,11 @@ var global RedicalConf
 
 func main() {
 
+	color.New(color.FgHiRed, color.BgCyan, color.Bold).Println("Hello, World\n")
+
 	var err error
 	global = RedicalConf{}
-	global.config = ParseConfig()
+	global.redisDB.DBConfig = ParseConfig()
 
 	if err = SetupLogger(); err != nil {
 		panic("Could not set up logging")
@@ -21,11 +24,10 @@ func main() {
 	defer TearDownLogger()
 	logger.Info("Logger initialized")
 
-	r, err := global.config.InitializeRedis()
-	if err != nil {
+	if err := global.redisDB.InitializeRedis(); err != nil {
 		panic("Redis could not be initialized")
 	}
-	global.redis = &r
+	defer global.redisDB.TearDownRedis()
 	logger.Info("CLI inputs parsed and redis-client initialized")
 
 	InitCmds()
@@ -44,13 +46,13 @@ func SetupPrompt() *prompt.Prompt {
 
 		prompt.OptionSelectedSuggestionBGColor(prompt.White),
 		prompt.OptionSelectedSuggestionTextColor(prompt.Black),
-		prompt.OptionSelectedDescriptionBGColor(prompt.White),
-		prompt.OptionSelectedDescriptionTextColor(prompt.DarkRed),
+		prompt.OptionSelectedDescriptionBGColor(prompt.Turquoise),
+		prompt.OptionSelectedDescriptionTextColor(prompt.Black),
 
-		prompt.OptionSuggestionBGColor(prompt.LightGray),
-		prompt.OptionSuggestionTextColor(prompt.Black),
-		prompt.OptionDescriptionBGColor(prompt.LightGray),
-		prompt.OptionDescriptionTextColor(prompt.Cyan),
+		prompt.OptionSuggestionBGColor(prompt.Cyan),
+		prompt.OptionSuggestionTextColor(prompt.White),
+		prompt.OptionDescriptionBGColor(prompt.DarkGray),
+		prompt.OptionDescriptionTextColor(prompt.White),
 	)
 	return p
 }

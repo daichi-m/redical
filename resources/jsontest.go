@@ -7,32 +7,28 @@ import (
 	"os"
 )
 
-type RedisCommand struct {
-	Arguments  []Arguments `json:"arguments"`
-	Complexity string      `json:"complexity"`
-	Group      string      `json:"group"`
-	Name       string      `json:"name"`
-	Since      string      `json:"since"`
-	Summary    string      `json:"summary"`
+type Command struct {
+	Arguments []Argument `json:"arguments"`
+	Name      string     `json:"name"`
 }
-type Arguments struct {
+type Argument struct {
 	Command  string   `json:"command,omitempty"`
 	Name     []string `json:"name,omitempty"`
 	Optional bool     `json:"optional,omitempty"`
-	Type     []string `json:"type"`
 	Enum     []string `json:"enum,omitempty"`
+	Multiple bool     `json:"multiple,omitempty"`
 }
 
-type RedisCommands struct {
-	RedisCmdList []RedisCommand `json:"redisCommands"`
+type CommandList struct {
+	Cmds []Command `json:"redisCommands"`
 }
 
 func main() {
-	f, err := os.Open("redis-commands-golang.json")
+	f, err := os.Open("redis-commands-golang-mini.json")
 	if err != nil {
 		panic(err)
 	}
-	var rc RedisCommands
+	var rc CommandList
 	bts, err := ioutil.ReadAll(f)
 	if err != nil {
 		panic(err)
@@ -41,7 +37,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	for _, r := range rc.RedisCmdList {
+	for _, r := range rc.Cmds {
 		fmt.Printf("%+v \n", r)
 	}
 }
