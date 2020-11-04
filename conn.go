@@ -84,7 +84,9 @@ func (db *RedisDB) InitializeRedis() error {
 
 // TearDownRedis tears down the redis connection
 func (db *RedisDB) TearDownRedis() {
-	db.redisConn.Close()
+	if db.redisConn != nil {
+		db.redisConn.Close()
+	}
 }
 
 func (db *RedisDB) createDialOpts() []redis.DialOption {
@@ -195,4 +197,15 @@ func (rc *RedicalConf) ModifyConfig(mod *DBConfig) error {
 	}
 	logger.Info("Redis client re-initialized with modified config %v", mod)
 	return nil
+}
+
+// PromptPrefix returns the prefix to be displayed in the prompt for this RedicalConf
+func (rc *RedicalConf) PromptPrefix() string {
+	var serv string
+	if rc.redisDB.redisConn == nil {
+		serv = "NA"
+	} else {
+		serv = fmt.Sprintf("%s:%d/%d", rc.redisDB.host, rc.redisDB.port, rc.redisDB.database)
+	}
+	return fmt.Sprintf("[%s] >>> ", serv)
 }

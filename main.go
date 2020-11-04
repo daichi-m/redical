@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/c-bata/go-prompt"
 	"github.com/fatih/color"
 )
@@ -12,7 +10,7 @@ var global RedicalConf
 
 func main() {
 
-	color.New(color.FgHiRed, color.BgCyan, color.Bold).Println("Hello, World\n")
+	banner()
 
 	var err error
 	global = RedicalConf{}
@@ -25,7 +23,7 @@ func main() {
 	logger.Info("Logger initialized")
 
 	if err := global.redisDB.InitializeRedis(); err != nil {
-		panic("Redis could not be initialized")
+		color.Red("Redis could not be initialized")
 	}
 	defer global.redisDB.TearDownRedis()
 	logger.Info("CLI inputs parsed and redis-client initialized")
@@ -39,9 +37,11 @@ func main() {
 
 // SetupPrompt sets up the CLI Prompt to run with proper prompt.CompletionManager and prompt.Executor
 func SetupPrompt() *prompt.Prompt {
-	p := prompt.New(action, CmdSuggestions,
+	p := prompt.New(PromptAction, CmdSuggestions,
 		prompt.OptionTitle("redical"),
-		prompt.OptionLivePrefix(livePrefix),
+		prompt.OptionLivePrefix(func() (string, bool) {
+			return global.PromptPrefix(), true
+		}),
 		prompt.OptionMaxSuggestion(5),
 
 		prompt.OptionSelectedSuggestionBGColor(prompt.White),
@@ -57,11 +57,14 @@ func SetupPrompt() *prompt.Prompt {
 	return p
 }
 
-func livePrefix() (string, bool) {
-	return ">>> ", true
-}
-
-func action(txt string) {
-	logger.Debug("Received input for action %s", txt)
-	fmt.Println(txt)
+func banner() {
+	banner := `
+*** Welcome to RediCal - the all new replacement to redis-cli ***
+   ___           __ _  _____       __
+  / _ \ ___  ___/ /(_)/ ___/___ _ / /
+ / , _// -_)/ _  // // /__ / _ '// / 
+/_/|_| \__/ \_,_//_/ \___/ \_,_//_/  
+								   
+`
+	color.Cyan(banner)
 }
