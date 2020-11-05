@@ -10,6 +10,7 @@ import (
 	"unicode/utf8"
 
 	"github.com/fatih/color"
+	"github.com/hackebrot/turtle"
 )
 
 // PromptAction takes the command from the prompt and runs the command on redis
@@ -25,10 +26,14 @@ func PromptAction(cmd string) {
 
 	defer func(start time.Time) {
 		duration := time.Now().Sub(start)
-		color.HiYellow("Executed in %v\n", duration)
+		durStr := color.HiYellowString("%v", duration)
+		printWithEmoji("stopwatch", durStr)
+
 	}(time.Now())
+
 	if err := action(cmd); err != nil {
-		color.Red("%s", err.Error())
+		errOut := color.RedString("%s", err.Error())
+		printWithEmoji("no_entry", errOut)
 	}
 }
 
@@ -58,7 +63,8 @@ func action(cmd string) error {
 	}
 	logger.Debug("Reply: %v, Error: %v", rep, err)
 	if err == nil {
-		fmt.Println(render(rep))
+		rendered := render(rep)
+		printWithEmoji("white_check_mark", rendered)
 	}
 	return err
 }
@@ -119,7 +125,7 @@ func render(reply interface{}) string {
 	}()
 
 	if reply == nil {
-		return color.HiGreenString("<nil>\n")
+		return color.HiGreenString("<nil>")
 	}
 
 	switch val := reply.(type) {
@@ -210,4 +216,16 @@ func printable(bytes []byte) bool {
 	}
 	return utf8.Valid(bytes)
 
+}
+
+func printWithEmoji(em string, data interface{}) {
+	emoji := turtle.Search(em)
+	var emChar string
+	if len(emoji) == 0 {
+		emChar = em
+	} else {
+		emChar = emoji[0].Char
+	}
+
+	fmt.Printf("%s  %v\n", emChar, data)
 }

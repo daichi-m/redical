@@ -130,6 +130,9 @@ func (db *DBConfig) Merge(other *DBConfig) {
 	if other.port != 0 {
 		db.port = other.port
 	}
+	if other.database != -1 {
+		db.database = other.database
+	}
 	if other.username != "" {
 		db.username = other.username
 	}
