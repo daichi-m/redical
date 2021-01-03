@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/c-bata/go-prompt"
+	"github.com/daichi-m/go-prompt"
 )
 
 var splitter *regexp.Regexp = regexp.MustCompile("\\s+")

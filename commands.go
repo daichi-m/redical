@@ -5,7 +5,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/c-bata/go-prompt"
+	"github.com/daichi-m/go-prompt"
 	"github.com/daichi-m/redical/assets"
 )
 
@@ -78,6 +78,7 @@ func (c Command) Suggest() prompt.Suggest {
 type CommandList struct {
 	Cmds        []Command `json:"redisCommands"`
 	completions []prompt.Suggest
+	keywords    []string
 }
 
 // InitSuggests initializes the prompt.Suggest slice for the redis command list
@@ -108,6 +109,9 @@ func InitCmds() error {
 	if err = global.supported.InitSuggests(); err != nil {
 		return err
 	}
-
+	for _, cmd := range global.supported.Cmds {
+		p := strings.Fields(cmd.Name)
+		global.supported.keywords = append(global.supported.keywords, p...)
+	}
 	return nil
 }
