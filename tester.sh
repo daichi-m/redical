@@ -11,7 +11,7 @@ echo "Done"
 
 # Build the executable
 echo -n "Building redical...."
-$GO build -o redical
+make build
 echo "Done"
 
 # Start redical
