@@ -11,10 +11,23 @@ import (
 
 // DBConfig is the struct that encapsulates the user inputs
 type DBConfig struct {
-	host, username, password, client                 string
-	port, database                                   int
-	timeout, connectTO, readTO, writeTO, keepAliveTO time.Duration
-	tls, skipVerifyTLS, debug, prod                  bool
+	host     string
+	username string
+	password string
+	client   string
+	port     int
+	database int
+
+	timeout   time.Duration
+	connectTO time.Duration
+	readTO    time.Duration
+	writeTO   time.Duration
+
+	keepAliveTO   time.Duration
+	tls           bool
+	skipVerifyTLS bool
+	debug         bool
+	prod          bool
 }
 
 // RedisDB is an instance of redis database
