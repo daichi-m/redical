@@ -42,6 +42,6 @@ func randString(len int) string {
 	if len == 0 {
 		return ""
 	}
-	ascii := 97 + rand.Intn(26)
+	ascii := rune(97) + rune(rand.Intn(26))
 	return string(ascii) + randString(len-1)
 }
