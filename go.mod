@@ -14,5 +14,3 @@ require (
 	github.com/spf13/pflag v1.0.5
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 )
-
-replace github.com/daichi-m/go-prompt => /Users/s0m01up/git-ext/go-prompt

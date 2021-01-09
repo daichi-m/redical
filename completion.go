@@ -26,14 +26,14 @@ func CmdSuggestions(d prompt.Document) []prompt.Suggest {
 	spaced := len(parts) > 1
 
 	if len(full) == 0 {
-		logger.Debug("Input empty returning empty suggest")
+		// logger.Debug("Input empty returning empty suggest")
 		return []prompt.Suggest{}
 	}
 
 	filt := prompt.FilterHasPrefix(cmds, full, true)
 	if !spaced {
-		logger.Debug("Full Input: %s, Current Word: %s, IsSpaced: %t, Filtered Suggestions: %#v\n",
-			full, curr, spaced, LogSafeSlice(filt))
+		// logger.Debug("Full Input: %s, Current Word: %s, IsSpaced: %t, Filtered Suggestions: %#v\n",
+		// full, curr, spaced, LogSafeSlice(filt))
 		return filterComplete(filt, full)
 	}
 	modFilt := filterMultiWord(filt, full, curr, parts)

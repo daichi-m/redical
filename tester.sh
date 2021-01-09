@@ -16,6 +16,7 @@ echo "Done"
 
 # Start redical
 echo "Start redical"
+export GO_PROMPT_ENABLE_LOG='true'
 ./redical --debug -P rpasswd
 
 # Remove docker container

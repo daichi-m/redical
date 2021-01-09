@@ -1605,3 +1605,818 @@
 /Users/s0m01up/git-ext/go-prompt/render.go:213: Prefix: 😄, Status: All systems go, Suffix: 🚀, Color: &color.Color{params:[]color.Attribute{42, 90, 1}, noColor:(*bool)(nil)}
 /Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
 /Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:49: start prompt
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"G"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GE"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"G"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GE"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GE"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"G"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"G"}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"g"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"ge"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"get"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"get", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"get", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"get", "x"}
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:49: start prompt
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"G"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GE"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:49: start prompt
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"G"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GE"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:251: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:49: start prompt
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"\n\n"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: 
+
+: 2, []byte{0xa, 0xa}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"\n\n"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: 
+
+: 2, []byte{0xa, 0xa}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"\n\r"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: 
+: 2, []byte{0xa, 0xd}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"\n\r\n\r"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: 
+
+: 4, []byte{0xa, 0xd, 0xa, 0xd}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"\n\r\n\r"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: 
+
+: 4, []byte{0xa, 0xd, 0xa, 0xd}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"\n\r"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: 
+: 2, []byte{0xa, 0xd}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"\n\r\n\r"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: 
+
+: 4, []byte{0xa, 0xd, 0xa, 0xd}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"\n\r\n\r"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: 
+
+: 4, []byte{0xa, 0xd, 0xa, 0xd}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"\n\r"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: 
+: 2, []byte{0xa, 0xd}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"\n\r"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: 
+: 2, []byte{0xa, 0xd}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"g"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: g: 1, []byte{0x67}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"ge"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: ge: 2, []byte{0x67, 0x65}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"get"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: get: 3, []byte{0x67, 0x65, 0x74}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"get", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: get: 3, []byte{0x67, 0x65, 0x74}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"get", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: get: 3, []byte{0x67, 0x65, 0x74}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"get", "", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: get: 3, []byte{0x67, 0x65, 0x74}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"get", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: get: 3, []byte{0x67, 0x65, 0x74}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"get", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: get: 3, []byte{0x67, 0x65, 0x74}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"get"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: get: 3, []byte{0x67, 0x65, 0x74}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"ge"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: ge: 2, []byte{0x67, 0x65}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"g"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: g: 1, []byte{0x67}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:49: start prompt
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"G"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: G: 1, []byte{0x47}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GE"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GE: 2, []byte{0x47, 0x45}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", "", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", "x"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: x: 1, []byte{0x78}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GET"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GET: 3, []byte{0x47, 0x45, 0x54}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"GE"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: GE: 2, []byte{0x47, 0x45}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"G"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: G: 1, []byte{0x47}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"S"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: S: 1, []byte{0x53}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"Se"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: Se: 2, []byte{0x53, 0x65}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"Set"}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: Set: 3, []byte{0x53, 0x65, 0x74}
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"Set", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: Set: 3, []byte{0x53, 0x65, 0x74}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{"Set", ""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: Set: 3, []byte{0x53, 0x65, 0x74}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:252: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:230: Words after split: []string{""}
+/Users/s0m01up/git-ext/go-prompt/render.go:232: : 0, []byte{}
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+                                                                        /Users/s0m01up/git-ext/go-prompt/prompt.go:49: start prompt
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/git-ext/go-prompt/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
+/Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
