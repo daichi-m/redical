@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
-	github.com/daichi-m/go-prompt v0.2.6-0.20201125071223-e79b709b3a12
+	github.com/daichi-m/go-prompt v1.0.0
 	github.com/fatih/color v1.10.0
 	github.com/gomodule/redigo v1.8.3
 	github.com/google/go-cmp v0.5.4 // indirect
