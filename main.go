@@ -41,20 +41,20 @@ func main() {
 }
 
 // SetupPrompt sets up the CLI Prompt to run with proper prompt.CompletionManager and prompt.Executor
-func SetupPrompt(config *RedicalConf) *prompt.Prompt {
-	p := prompt.New(config.Execute,
+func SetupPrompt(r *Redical) *prompt.Prompt {
+	p := prompt.New(r.Execute,
 		func(d prompt.Document) []prompt.Suggest {
-			cmds := config.supported.completions
-			return config.CmdSuggestions(cmds, d)
+			cmds := r.supported.completions
+			return r.CmdSuggestions(cmds, d)
 		},
 		prompt.OptionTitle("redical"),
 		prompt.OptionLivePrefix(func() (string, bool) {
-			return config.PromptPrefix(), true
+			return r.PromptPrefix(), true
 		}),
 		prompt.OptionMaxSuggestion(5),
 		prompt.OptionStatusBarCallback(statusBar),
 		prompt.OptionKeywordColor(color.New(color.FgHiGreen)),
-		prompt.OptionKeywords(config.supported.keywords),
+		prompt.OptionKeywords(r.supported.keywords),
 	)
 	return p
 }

@@ -17,7 +17,7 @@ and tries to filter based on the current word that is being input.
 E.g., if user enters `AC` suggestions comes up as `ACL LOAD`, `ACL LOG`, `ACL SAVE`, `ACL LIST` etc.
 but once user enters `ACL L` suggestions changes to `LOAD`, `LOG` and `LIST` only.
 */
-func (rc *RedicalConf) CmdSuggestions(cmds []prompt.Suggest, d prompt.Document) []prompt.Suggest {
+func (r *Redical) CmdSuggestions(cmds []prompt.Suggest, d prompt.Document) []prompt.Suggest {
 	full := strings.ToUpper(d.TextBeforeCursor())
 	curr := strings.ToUpper(d.GetWordBeforeCursor())
 	parts := splitter.Split(full, -1)

@@ -9,7 +9,7 @@ import (
 )
 
 // Execute executes the given command in cmd with the RedicalConf
-func (rc *RedicalConf) Execute(cmd string) {
+func (r *Redical) Execute(cmd string) {
 	if len(strings.TrimSpace(cmd)) == 0 {
 		return
 	}
@@ -17,22 +17,22 @@ func (rc *RedicalConf) Execute(cmd string) {
 	if len(params) <= 0 {
 		handleError(fmt.Errorf("Unexpected error"))
 	}
-	if ok, err := rc.connRefresh(params); ok {
+	if ok, err := r.connRefresh(params); ok {
 		handleError(err)
 	}
 	return
 }
 
-func (rc *RedicalConf) connRefresh(cmds []string) (bool, error) {
+func (r *Redical) connRefresh(cmds []string) (bool, error) {
 
 	switch cmds[0] {
 	case "SELECT":
 		if db, ok := ExtractInt(cmds, 1); ok {
-			return true, rc.SwitchDB(db)
+			return true, r.SwitchDB(db)
 		}
 	case "AUTH":
 		if pass, ok := SafeIndexStr(cmds, 1); ok {
-			return true, rc.Authenticate(pass)
+			return true, r.Authenticate(pass)
 		}
 	default:
 		return false, nil
