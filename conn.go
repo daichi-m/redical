@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/gomodule/redigo/redis"
+	"github.com/kpango/glg"
 	flag "github.com/spf13/pflag"
 )
 
@@ -124,7 +125,7 @@ func (db *RedisDB) createDialOpts() []redis.DialOption {
 	if len(db.client) > 0 {
 		dialOpts = append(dialOpts, redis.DialClientName(db.client))
 	}
-	logger.Info("Create redis with options: %v", db)
+	glg.Info("Create redis with options: %v", db)
 	return dialOpts
 }
 
@@ -135,7 +136,7 @@ corresponding field in this DBConfig object
 */
 func (db *DBConfig) Merge(other *DBConfig) {
 
-	logger.Debug("Request to merge config: %v", other)
+	glg.Debug("Request to merge config: %v", other)
 
 	if other.host != "" {
 		db.host = other.host
@@ -176,7 +177,7 @@ func (db *DBConfig) Merge(other *DBConfig) {
 	if other.skipVerifyTLS == true {
 		db.skipVerifyTLS = true
 	}
-	logger.Info("Merged DBConfig: %v", db)
+	glg.Info("Merged DBConfig: %v", db)
 }
 
 func (db *DBConfig) String() string {
@@ -195,33 +196,4 @@ func (db *DBConfig) String() string {
 
 	j, _ := json.Marshal(x)
 	return string(j)
-}
-
-// RedicalConf is the global configuration struct to encapsulate all global parameters
-type RedicalConf struct {
-	redisDB   RedisDB
-	supported CommandList
-}
-
-// ModifyConfig modifies the DBConfig for redis and refreshes the global redis client.
-func (rc *RedicalConf) ModifyConfig(mod *DBConfig) error {
-	tmp := rc.redisDB
-	rc.redisDB.Merge(mod)
-	if err := rc.redisDB.InitializeRedis(); err != nil {
-		rc.redisDB = tmp
-		return err
-	}
-	logger.Info("Redis client re-initialized with modified config %v", mod)
-	return nil
-}
-
-// PromptPrefix returns the prefix to be displayed in the prompt for this RedicalConf
-func (rc *RedicalConf) PromptPrefix() string {
-	var serv string
-	if rc.redisDB.redisConn == nil {
-		serv = "NA"
-	} else {
-		serv = fmt.Sprintf("%s:%d/%d", rc.redisDB.host, rc.redisDB.port, rc.redisDB.database)
-	}
-	return fmt.Sprintf("[%s] >>> ", serv)
 }

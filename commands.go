@@ -76,7 +76,7 @@ func (c Command) Suggest() prompt.Suggest {
 
 // CommandList is the list of redis commands supported by redical
 type CommandList struct {
-	Cmds        []Command `json:"redisCommands"`
+	Commands    []Command `json:"redisCommands"`
 	completions []prompt.Suggest
 	keywords    []string
 }
@@ -87,8 +87,8 @@ func (cl *CommandList) InitSuggests() error {
 		return errors.New("Already initialized the suggestions")
 	}
 
-	compl := make([]prompt.Suggest, 0, len(cl.Cmds))
-	for _, c := range cl.Cmds {
+	compl := make([]prompt.Suggest, 0, len(cl.Commands))
+	for _, c := range cl.Commands {
 		sg := c.Suggest()
 		compl = append(compl, sg)
 	}
@@ -97,21 +97,21 @@ func (cl *CommandList) InitSuggests() error {
 }
 
 // InitCmds initializes the list of redis commands supported by redical
-func InitCmds() error {
+func InitCmds() (*CommandList, error) {
 	data, err := assets.Asset("resources/redis-commands-golang.json")
 	if err != nil {
-		return err
+		return nil, err
 	}
-
-	if err = json.Unmarshal(data, &global.supported); err != nil {
-		return err
+	var cmds CommandList
+	if err = json.Unmarshal(data, &cmds); err != nil {
+		return nil, err
 	}
-	if err = global.supported.InitSuggests(); err != nil {
-		return err
+	if err = cmds.InitSuggests(); err != nil {
+		return nil, err
 	}
-	for _, cmd := range global.supported.Cmds {
+	for _, cmd := range cmds.Commands {
 		p := strings.Fields(cmd.Name)
-		global.supported.keywords = append(global.supported.keywords, p...)
+		cmds.keywords = append(cmds.keywords, p...)
 	}
-	return nil
+	return &cmds, nil
 }

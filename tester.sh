@@ -3,6 +3,7 @@ set -e
 
 GO=$(which go)
 DOCKER=$(which docker)
+GO_PROMPT_ENABLE_LOG="true"
 
 # Start the redis container
 echo -n "Starting redis container...."

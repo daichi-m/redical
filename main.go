@@ -1,70 +1,60 @@
 package main
 
 import (
-	"os"
+	"fmt"
+	"io"
 
 	"github.com/daichi-m/go-prompt"
 	"github.com/fatih/color"
 	"github.com/hackebrot/turtle"
+	"github.com/kpango/glg"
+	lumberjack "gopkg.in/natefinch/lumberjack.v2"
 )
 
-// global is the global RedicalConf object to store all global parameters
-var global RedicalConf
-
+// // global is the global RedicalConf object to store all global parameters
+// var global RedicalConf
 func main() {
 
-	os.Setenv("GO_PROMPT_ENABLE_LOG", "1")
 	var err error
 	banner()
 
-	global = RedicalConf{}
-	global.redisDB.DBConfig = ParseConfig()
-
-	if err = SetupLogger(); err != nil {
-		panic("Could not set up logging")
+	// Initialize the configs
+	config, err := NewRedicalConf()
+	if err != nil {
+		panic(fmt.Sprintf("Could not initialize config", err.Error()))
 	}
-	defer TearDownLogger()
-	logger.Info("Logger initialized")
+	defer config.Close()
 
-	if err := global.redisDB.InitializeRedis(); err != nil {
-		color.Red("Redis could not be initialized")
-	}
-	defer global.redisDB.TearDownRedis()
-	logger.Info("CLI inputs parsed and redis-client initialized")
+	// Create redis connection
+	config.redisDB.InitializeRedis()
+	defer config.redisDB.TearDownRedis()
 
-	InitCmds()
-	p := SetupPrompt()
+	// Setup logging
+	logFile, logger := SetupLogger()
+	defer logFile.Close()
+
+	// Setup CLI prompt
+	p := SetupPrompt(config)
 	logger.Info("Prompt setup complete, initialize prompt now")
 	p.Run()
 
 }
 
 // SetupPrompt sets up the CLI Prompt to run with proper prompt.CompletionManager and prompt.Executor
-func SetupPrompt() *prompt.Prompt {
-	kwColor := make(map[string]*color.Color)
-	for _, k := range global.supported.keywords {
-		kwColor[k] = color.New(color.FgHiGreen, color.Bold)
-	}
-	p := prompt.New(PromptAction, CmdSuggestions,
+func SetupPrompt(config *RedicalConf) *prompt.Prompt {
+	p := prompt.New(config.Execute,
+		func(d prompt.Document) []prompt.Suggest {
+			cmds := config.supported.completions
+			return config.CmdSuggestions(cmds, d)
+		},
 		prompt.OptionTitle("redical"),
 		prompt.OptionLivePrefix(func() (string, bool) {
-			return global.PromptPrefix(), true
+			return config.PromptPrefix(), true
 		}),
 		prompt.OptionMaxSuggestion(5),
 		prompt.OptionStatusBarCallback(statusBar),
 		prompt.OptionKeywordColor(color.New(color.FgHiGreen)),
-		prompt.OptionKeywords(global.supported.keywords),
-
-		/*
-			prompt.OptionSelectedSuggestionBGColor(prompt.White),
-			prompt.OptionSelectedSuggestionTextColor(prompt.Black),
-			prompt.OptionSelectedDescriptionBGColor(prompt.Turquoise),
-			prompt.OptionSelectedDescriptionTextColor(prompt.Black),
-
-			prompt.OptionSuggestionBGColor(prompt.Cyan),
-			prompt.OptionSuggestionTextColor(prompt.White),
-			prompt.OptionDescriptionBGColor(prompt.DarkGray),
-			prompt.OptionDescriptionTextColor(prompt.White),*/
+		prompt.OptionKeywords(config.supported.keywords),
 	)
 	return p
 }
@@ -83,6 +73,26 @@ func banner() {
 
 func statusBar(buf *prompt.Buffer, comp *prompt.CompletionManager) (string, bool) {
 	return "All systems go", true
+}
+
+// SetupLogger sets up the logging params
+func SetupLogger() (io.WriteCloser, *glg.Glg) {
+
+	logFile := &lumberjack.Logger{
+		Filename:   "logs/redical.log",
+		MaxSize:    5, // megabytes
+		MaxBackups: 3,
+		MaxAge:     2,    //days
+		Compress:   true, // disabled by default
+		LocalTime:  false,
+	}
+	logger := glg.Get().
+		SetMode(glg.BOTH).
+		AddWriter(logFile).
+		InitWriter().
+		DisableJSON().
+		DisableColor()
+	return logFile, logger
 }
 
 func statusBarPrefSuf() (string, string) {

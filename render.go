@@ -9,6 +9,7 @@ import (
 
 	"github.com/fatih/color"
 	"github.com/hackebrot/turtle"
+	"github.com/kpango/glg"
 )
 
 // render will render the reply from redis into a human friendly format with RT latency
@@ -16,7 +17,7 @@ func render(reply interface{}) string {
 
 	defer func() {
 		if r := recover(); r != nil {
-			logger.Error("Faced panic while render %v - Panic %v", reply, r)
+			glg.Error("Faced panic while render %v - Panic %v", reply, r)
 			color.Red("Panic while rendering: %v", r)
 		}
 	}()
