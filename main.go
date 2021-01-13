@@ -21,7 +21,7 @@ func main() {
 	// Initialize the configs
 	config, err := NewRedicalConf()
 	if err != nil {
-		panic(fmt.Sprintf("Could not initialize config", err.Error()))
+		panic(fmt.Sprintf("Could not initialize config: %s", err.Error()))
 	}
 	defer config.Close()
 
