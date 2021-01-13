@@ -16,6 +16,10 @@ on:
 jobs:
   test:
     name: Run tests
+    if: > 
+      contains(${{ github.ref }}, 'refs/tags/'') || 
+      contains(${{ github.ref }}, 'develop') || 
+      contains(${{ github.ref }}, 'master')
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
