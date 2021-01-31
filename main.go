@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"io"
-	"strings"
 
 	"github.com/daichi-m/go-prompt"
 	"github.com/fatih/color"
@@ -43,10 +42,7 @@ func main() {
 
 // SetupPrompt sets up the CLI Prompt to run with proper prompt.CompletionManager and prompt.Executor
 func SetupPrompt(r *Redical) *prompt.Prompt {
-	kw := make([]string, 0)
-	for k := range r.supported.keywordCommands {
-		kw = append(kw, strings.Fields(k)...)
-	}
+
 	p := prompt.New(r.Execute,
 		func(d prompt.Document) []prompt.Suggest {
 			/*cmds := r.supported.completions
@@ -60,7 +56,7 @@ func SetupPrompt(r *Redical) *prompt.Prompt {
 		prompt.OptionMaxSuggestion(5),
 		prompt.OptionStatusBarCallback(statusBar),
 		prompt.OptionKeywordColor(color.New(color.FgHiGreen)),
-		prompt.OptionKeywords(kw),
+		prompt.OptionKeywords(r.supported.Keywords()),
 	)
 	return p
 }

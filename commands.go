@@ -87,8 +87,47 @@ func (c *Command) InitSuggest() prompt.Suggest {
 
 // CommandList is the list of redis commands supported by redical
 type CommandList struct {
-	Commands        []Command `json:"redisCommands"`
-	keywordCommands map[string]Command
+	Commands []Command `json:"redisCommands"`
+	kwCmd    map[string]*Command
+	multikey map[string]bool
+}
+
+// Keywords gets the list of keywords for this command list
+func (cl *CommandList) Keywords() []string {
+	kw := make([]string, 0)
+	for x := range cl.kwCmd {
+		xs := strings.Fields(x)
+		kw = append(kw, xs...)
+	}
+	return kw
+}
+
+// extractCommand extracts the command and the params from a given line string
+func (cl *CommandList) extractCommand(line string) (cmd string, params []string, err error) {
+	parts := strings.Fields(line)
+	l := len(parts)
+	err = nil
+
+	if cl.multikey[parts[0]] {
+		if l <= 1 {
+			err = fmt.Errorf("Cannot split %s into command and params", line)
+			return
+		}
+		cmd = parts[0] + " " + parts[1]
+		if l < 3 {
+			params = []string{}
+		} else {
+			params = parts[2:]
+		}
+		return
+	}
+	cmd = parts[0]
+	if l < 2 {
+		params = []string{}
+	} else {
+		params = parts[1:]
+	}
+	return
 }
 
 // InitCmds initializes the list of redis commands supported by redical
@@ -102,10 +141,13 @@ func InitCmds() (*CommandList, error) {
 		return nil, err
 	}
 
-	for _, cmd := range cmds.Commands {
-		cmd.InitSuggest()
-		// p := strings.Fields(cmd.Name)
-		cmds.keywordCommands[cmd.Name] = cmd
+	for i := range cmds.Commands {
+		cmds.Commands[i].InitSuggest()
+		cmds.kwCmd[cmds.Commands[i].Name] = &(cmds.Commands[i])
+		if strings.Contains(cmds.Commands[i].Name, " ") {
+			first := strings.Fields(cmds.Commands[i].Name)[0]
+			cmds.multikey[first] = true
+		}
 	}
 	logs := new(strings.Builder)
 	for i, c := range cmds.Commands {

@@ -16,7 +16,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/spf13/pflag v1.0.5
-	go.uber.org/atomic v1.5.0
+	github.com/stretchr/testify v1.7.0
 	golang.org/x/sys v0.0.0-20210113181707-4bcb84eeeb78 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 )

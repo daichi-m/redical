@@ -16,7 +16,7 @@ func ExtractInt(arr []string, i int) (int, bool) {
 	return x, true
 }
 
-// SafeIndexStr returns the string at index i from an array after doing out-of-bounds check.
+// ExtractStr returns the string at index i from an array after doing out-of-bounds check.
 func ExtractStr(arr []string, i int) (string, bool) {
 	if len(arr) <= i {
 		return "", false

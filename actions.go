@@ -43,41 +43,71 @@ func strIntfConvert(in []string) (out []interface{}) {
 	return
 }
 
+// Printf for pretty printing in Redical.
+func (r *Redical) Printf(format string, params ...interface{}) {
+	fmt.Printf("%4s "+format+"\n", "✅", params)
+}
+
+// Println for pretty printing in Redical.
+func (r *Redical) Println(params ...interface{}) {
+	format := strings.Builder{}
+	for i := 0; i < len(params); i++ {
+		format.WriteString(" %v ")
+	}
+	r.Printf(format.String(), params)
+}
+
+// Errorln for pretty printing errors in Redical.
+func (r *Redical) Errorln(err error) {
+	fmt.Printf("%4s %s \n", "🛑", err.Error())
+}
+
 // Execute executes the given command in cmd with the RedicalConf
 func (r *Redical) Execute(line string) {
 	defer func() {
-		if r := recover(); r != nil {
-			glg.Warnf("Panic occured: %s... Recovering now", r)
-			fmt.Println(justifyOutput(emojiFor("fail"), fmt.Sprint(r)))
+		if rec := recover(); r != nil {
+			glg.Warnf("Panic occured: %s... Recovering now", rec)
+			r.Errorln(fmt.Errorf("%v", rec))
 		}
 	}()
 
 	if len(strings.TrimSpace(line)) == 0 {
 		return
 	}
-	cmds := strings.Fields(line)
-	if len(cmds) <= 0 {
-		handleError(fmt.Errorf("Unexpected error"))
+	cmd, params, err := r.supported.extractCommand(line)
+	if err != nil {
+		r.Errorln(err)
 	}
+	glg.Debugf("Command inferred %s with params: %v", cmd, params)
 
-	if action, ok := actionMap[cmds[0]]; ok {
-		msg, err := action(r, cmds[0], cmds[1:]...)
+	if action, ok := actionMap[cmd]; ok {
+		output, err := action(r, cmd, params...)
 		if err != nil {
-			fmt.Println(err.Error())
+			r.Errorln(err)
+			glg.Warn("Error in execution", err.Error())
 			return
 		}
-		fmt.Println(msg)
+		glg.Debugf("Output produced: %s", output)
+		r.Println(output)
 		return
 	}
 
-	// r.supported.Commands
-	if action, ok := actionMap["retType"]; ok {
-		msg, err := action(r, cmds[0], cmds[1:]...)
+	command, ok := r.supported.kwCmd[cmd]
+	if !ok {
+		r.Errorln(fmt.Errorf("Did not find command %s", cmd))
+		return
+	}
+
+	retType := command.Return
+	if action, ok := actionMap[retType]; ok {
+		output, err := action(r, cmd, params...)
 		if err != nil {
-			fmt.Println(err.Error())
+			r.Errorln(err)
+			glg.Error("Error in execution", err.Error())
 			return
 		}
-		fmt.Println(msg)
+		glg.Debugf("Output produced: %s", output)
+		r.Println(output)
 		return
 	}
 	glg.Warnf("Could not get action from command or return type. Line: %s", line)
@@ -88,7 +118,7 @@ func selectAct(r *Redical, cmd string, params ...string) (msg string, err error)
 	if db, ok := ExtractInt(params, 0); ok {
 		err = r.SwitchDB(db)
 		if err == nil {
-			msg = fmt.Sprint("Switched to DB %d", db)
+			msg = fmt.Sprintf("Switched to DB %d", db)
 		}
 		return
 	}
