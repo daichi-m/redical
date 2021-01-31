@@ -32,8 +32,6 @@ func (r *Redical) CmdSuggestions(cmds []prompt.Suggest, d prompt.Document) []pro
 
 	filt := prompt.FilterHasPrefix(cmds, full, true)
 	if !spaced {
-		// logger.Debug("Full Input: %s, Current Word: %s, IsSpaced: %t, Filtered Suggestions: %#v\n",
-		// full, curr, spaced, LogSafeSlice(filt))
 		return filterComplete(filt, full)
 	}
 	modFilt := filterMultiWord(filt, full, curr, parts)
@@ -56,7 +54,8 @@ func filterMultiWord(filt []prompt.Suggest, full, current string, parts []string
 		modFilt = append(modFilt, sugg)
 	}
 	modFilt = prompt.FilterHasPrefix(modFilt, current, true)
-	glg.Debug("Full Input: %s, Current Word: %s, Prefix: %s, IsSpaced: %t, Filtered Suggestions: %#v\n",
+	glg.Debugf("Full Input: %s, Current Word: %s, Prefix: %s,"+
+		"IsSpaced: %t, Filtered Suggestions: %#v",
 		full, current, prefix, spaced, modFilt)
 	return modFilt
 }
@@ -67,7 +66,7 @@ func filterComplete(filt []prompt.Suggest, txt string) []prompt.Suggest {
 	}
 
 	filt1 := filt[0]
-	glg.Debug("Suggestions: %#v, Full Text: %s\n", filt, txt)
+	glg.Debugf("Suggestions: %#v, Full Text: %s", filt, txt)
 	if filt1.Text == txt {
 		return []prompt.Suggest{}
 	}

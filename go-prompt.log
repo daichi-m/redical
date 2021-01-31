@@ -2420,3 +2420,453 @@
 /Users/s0m01up/git-ext/go-prompt/prompt.go:270: start reading buffer
 /Users/s0m01up/git-ext/go-prompt/render.go:247: Window size in which to render: (62 x 110)
 /Users/s0m01up/git-ext/go-prompt/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 27,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 28,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 110)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:45: Catch SIGWINCH
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (68 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 27,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 28,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 29,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 30,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 30,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (62 x 107)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+                                                                                                                          /Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:49: start prompt
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 24,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 25,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:115: Cursor position for render completion: 26,0
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/signal_posix.go:28: stop handleSignals
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/render.go:247: Window size in which to render: (15 x 221)
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:270: start reading buffer
+/Users/s0m01up/Binaries/golang/gopath/pkg/mod/github.com/daichi-m/go-prompt@v1.0.1/prompt.go:274: stop reading buffer
+                                                                                                                          

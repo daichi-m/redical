@@ -61,8 +61,8 @@ func (r *Redical) Close() {
 	r.redisDB.TearDownRedis()
 }
 
-// NewRedicalConf creates an instance of RedicalConf that is being used across the system
-func NewRedicalConf() (*Redical, error) {
+// InitializeRedical creates an instance of RedicalConf that is being used across the system
+func InitializeRedical() (*Redical, error) {
 	db := ParseConfig()
 	supp, err := InitCmds()
 	if err != nil {

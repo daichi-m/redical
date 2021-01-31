@@ -14,7 +14,6 @@ import (
 
 // render will render the reply from redis into a human friendly format with RT latency
 func render(reply interface{}) string {
-
 	defer func() {
 		if r := recover(); r != nil {
 			glg.Error("Faced panic while render %v - Panic %v", reply, r)
@@ -47,7 +46,6 @@ func render(reply interface{}) string {
 
 // renderComplex renders complex data type like Slice and Map
 func renderComplex(reply interface{}) string {
-
 	switch val := reflect.ValueOf(reply); val.Kind() {
 
 	case reflect.Slice:
@@ -88,7 +86,6 @@ func renderSlice(slc []interface{}) string {
 }
 
 func renderMap(mp map[interface{}]interface{}) string {
-
 	var delim string
 
 	if len(mp) > 10 {
@@ -114,7 +111,6 @@ func printable(bytes []byte) bool {
 		return false
 	}
 	return utf8.Valid(bytes)
-
 }
 
 func printWithEmoji(em string, data interface{}) {

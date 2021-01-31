@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"strings"
 
 	"github.com/daichi-m/go-prompt"
 	"github.com/fatih/color"
@@ -14,12 +15,14 @@ import (
 // // global is the global RedicalConf object to store all global parameters
 // var global RedicalConf
 func main() {
+	// Setup logging
+	logFile, logger := SetupLogger()
+	defer logFile.Close()
 
-	var err error
 	banner()
 
 	// Initialize the configs
-	config, err := NewRedicalConf()
+	config, err := InitializeRedical()
 	if err != nil {
 		panic(fmt.Sprintf("Could not initialize config: %s", err.Error()))
 	}
@@ -29,23 +32,26 @@ func main() {
 	config.redisDB.InitializeRedis()
 	defer config.redisDB.TearDownRedis()
 
-	// Setup logging
-	logFile, logger := SetupLogger()
-	defer logFile.Close()
+	// Initialize the set of emojis
+	config.initEmojis()
 
 	// Setup CLI prompt
 	p := SetupPrompt(config)
 	logger.Info("Prompt setup complete, initialize prompt now")
 	p.Run()
-
 }
 
 // SetupPrompt sets up the CLI Prompt to run with proper prompt.CompletionManager and prompt.Executor
 func SetupPrompt(r *Redical) *prompt.Prompt {
+	kw := make([]string, 0)
+	for k := range r.supported.keywordCommands {
+		kw = append(kw, strings.Fields(k)...)
+	}
 	p := prompt.New(r.Execute,
 		func(d prompt.Document) []prompt.Suggest {
-			cmds := r.supported.completions
-			return r.CmdSuggestions(cmds, d)
+			/*cmds := r.supported.completions
+			return r.CmdSuggestions(cmds, d)*/
+			return nil
 		},
 		prompt.OptionTitle("redical"),
 		prompt.OptionLivePrefix(func() (string, bool) {
@@ -54,7 +60,7 @@ func SetupPrompt(r *Redical) *prompt.Prompt {
 		prompt.OptionMaxSuggestion(5),
 		prompt.OptionStatusBarCallback(statusBar),
 		prompt.OptionKeywordColor(color.New(color.FgHiGreen)),
-		prompt.OptionKeywords(r.supported.keywords),
+		prompt.OptionKeywords(kw),
 	)
 	return p
 }
@@ -77,19 +83,22 @@ func statusBar(buf *prompt.Buffer, comp *prompt.CompletionManager) (string, bool
 
 // SetupLogger sets up the logging params
 func SetupLogger() (io.WriteCloser, *glg.Glg) {
-
 	logFile := &lumberjack.Logger{
 		Filename:   "logs/redical.log",
 		MaxSize:    5, // megabytes
 		MaxBackups: 3,
-		MaxAge:     2,    //days
+		MaxAge:     2,    // days
 		Compress:   true, // disabled by default
 		LocalTime:  false,
 	}
 	logger := glg.Get().
-		SetMode(glg.BOTH).
-		AddWriter(logFile).
+		SetMode(glg.WRITER).
 		InitWriter().
+		AddWriter(logFile).
+		// AddLevelWriter(glg.DEBG, logFile).
+		// AddLevelWriter(glg.INFO, logFile).
+		// AddLevelWriter(glg.WARN, logFile).
+		// AddLevelWriter(glg.ERR, logFile).
 		DisableJSON().
 		DisableColor()
 	return logFile, logger

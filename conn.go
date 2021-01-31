@@ -39,7 +39,6 @@ type RedisDB struct {
 
 // ParseConfig parses the input flags and initializes the global Input struct
 func ParseConfig() DBConfig {
-
 	host := flag.StringP("host", "h", "localhost", "Hostname of the redis instance")
 	port := flag.IntP("port", "p", 6379, "Port of the redis instance")
 	db := flag.IntP("database", "d", 0, "Redis database to select")
@@ -135,7 +134,6 @@ picks up all the non-zero values from other and assigns them to the
 corresponding field in this DBConfig object
 */
 func (db *DBConfig) Merge(other *DBConfig) {
-
 	glg.Debug("Request to merge config: %v", other)
 
 	if other.host != "" {

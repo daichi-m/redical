@@ -2,11 +2,12 @@ package main
 
 import (
 	"encoding/json"
-	"errors"
+	"fmt"
 	"strings"
 
 	"github.com/daichi-m/go-prompt"
 	"github.com/daichi-m/redical/assets"
+	"github.com/kpango/glg"
 )
 
 // TODO: Better documentation comments
@@ -20,7 +21,7 @@ type Argument struct {
 	Multiple bool     `json:"multiple,omitempty"`
 }
 
-func (arg Argument) String() string {
+func (arg *Argument) String() string {
 	var sb strings.Builder
 	if len(arg.Command) != 0 {
 		sb.WriteString(strings.ToUpper(arg.Command))
@@ -48,9 +49,12 @@ func (arg Argument) String() string {
 type Command struct {
 	Arguments []Argument `json:"arguments"`
 	Name      string     `json:"name"`
+	Return    string     `json:"return"`
+	Summary   string     `json:"summary"`
+	suggest   prompt.Suggest
 }
 
-func (c Command) String() string {
+func (c *Command) String() string {
 	var sb strings.Builder
 	sb.WriteString(c.Name)
 	sb.WriteString(" ")
@@ -58,60 +62,58 @@ func (c Command) String() string {
 		sb.WriteString(a.String())
 		sb.WriteString(" ")
 	}
+	if len(c.Return) > 0 {
+		sb.WriteString(fmt.Sprintf(" -> %25s", c.Return))
+	}
+	if len(c.Summary) > 0 {
+		sb.WriteString(fmt.Sprintf("\t @%s", c.Summary))
+	}
 	return sb.String()
 }
 
-// Suggest returns a promt.Suggest object for a RedisCommand
-func (c Command) Suggest() prompt.Suggest {
+// InitSuggest returns a promt.InitSuggest object for a RedisCommand
+func (c *Command) InitSuggest() prompt.Suggest {
 	var args strings.Builder
 	for _, a := range c.Arguments {
 		args.WriteString(a.String())
 		args.WriteString(" ")
 	}
-	return prompt.Suggest{
+	c.suggest = prompt.Suggest{
 		Text:        c.Name,
 		Description: args.String(),
 	}
+	return c.suggest
 }
 
 // CommandList is the list of redis commands supported by redical
 type CommandList struct {
-	Commands    []Command `json:"redisCommands"`
-	completions []prompt.Suggest
-	keywords    []string
-}
-
-// InitSuggests initializes the prompt.Suggest slice for the redis command list
-func (cl *CommandList) InitSuggests() error {
-	if len(cl.completions) > 0 {
-		return errors.New("Already initialized the suggestions")
-	}
-
-	compl := make([]prompt.Suggest, 0, len(cl.Commands))
-	for _, c := range cl.Commands {
-		sg := c.Suggest()
-		compl = append(compl, sg)
-	}
-	cl.completions = compl
-	return nil
+	Commands        []Command `json:"redisCommands"`
+	keywordCommands map[string]Command
 }
 
 // InitCmds initializes the list of redis commands supported by redical
 func InitCmds() (*CommandList, error) {
-	data, err := assets.Asset("resources/redis-commands-golang.json")
+	data, err := assets.Asset("resources/commands-golangcompat.json")
 	if err != nil {
 		return nil, err
 	}
 	var cmds CommandList
-	if err = json.Unmarshal(data, &cmds); err != nil {
+	if err = json.Unmarshal(data, &(cmds.Commands)); err != nil {
 		return nil, err
 	}
-	if err = cmds.InitSuggests(); err != nil {
-		return nil, err
-	}
+
 	for _, cmd := range cmds.Commands {
-		p := strings.Fields(cmd.Name)
-		cmds.keywords = append(cmds.keywords, p...)
+		cmd.InitSuggest()
+		// p := strings.Fields(cmd.Name)
+		cmds.keywordCommands[cmd.Name] = cmd
 	}
+	logs := new(strings.Builder)
+	for i, c := range cmds.Commands {
+		logs.WriteString(fmt.Sprint(c))
+		if i <= len(cmds.Commands)-1 {
+			logs.WriteString("\n")
+		}
+	}
+	glg.Debug("Commands read in \n", logs.String())
 	return &cmds, nil
 }

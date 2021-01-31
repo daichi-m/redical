@@ -1,6 +1,8 @@
 package main
 
-import "strconv"
+import (
+	"strconv"
+)
 
 // ExtractInt extracts an integer value from a given string slice at an index
 func ExtractInt(arr []string, i int) (int, bool) {
@@ -15,9 +17,18 @@ func ExtractInt(arr []string, i int) (int, bool) {
 }
 
 // SafeIndexStr returns the string at index i from an array after doing out-of-bounds check.
-func SafeIndexStr(arr []string, i int) (string, bool) {
+func ExtractStr(arr []string, i int) (string, bool) {
 	if len(arr) <= i {
 		return "", false
 	}
 	return arr[i], true
 }
+
+// // StrConvert converts a slice of any type to a slice of string using fmt.Sprint
+// func StrConvert(elems ...interface{}) []string {
+// 	strSlc := make([]string, 0)
+// 	for _, x := range elems {
+// 		strSlc = append(strSlc, fmt.Sprint(x))
+// 	}
+// 	return strSlc
+// }

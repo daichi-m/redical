@@ -11,6 +11,7 @@ type Command struct {
 	Arguments []Argument `json:"arguments"`
 	Name      string     `json:"name"`
 }
+
 type Argument struct {
 	Command  string   `json:"command,omitempty"`
 	Name     []string `json:"name,omitempty"`

@@ -8,43 +8,168 @@ import (
 	"github.com/kpango/glg"
 )
 
-// Execute executes the given command in cmd with the RedicalConf
-func (r *Redical) Execute(cmd string) {
-	if len(strings.TrimSpace(cmd)) == 0 {
-		return
+// RedicalAction is the template function type for executing a command on Redis.
+type RedicalAction func(r *Redical, cmd string, params ...string) (string, error)
+
+var (
+	emojis    map[string]string
+	actionMap map[string]RedicalAction
+)
+
+func (r *Redical) initEmojis() {
+	emojis = make(map[string]string)
+	emojis["ok"] = "✅"
+	emojis["fail"] = "🛑"
+	emojis["time"] = "⏱"
+	emojis["user"] = "👤"
+
+	actionMap = make(map[string]RedicalAction)
+	actionMap["SELECT"] = selectAct
+	actionMap["AUTH"] = authAct
+}
+
+func emojiFor(key string) string {
+	if e, ok := emojis[key]; ok {
+		return e
 	}
-	params := strings.Fields(cmd)
-	if len(params) <= 0 {
-		handleError(fmt.Errorf("Unexpected error"))
-	}
-	if ok, err := r.connRefresh(params); ok {
-		handleError(err)
+	return ""
+}
+
+func strIntfConvert(in []string) (out []interface{}) {
+	out = make([]interface{}, 0, len(in))
+	for _, x := range in {
+		out = append(out, x)
 	}
 	return
 }
 
-func (r *Redical) connRefresh(cmds []string) (bool, error) {
+// Execute executes the given command in cmd with the RedicalConf
+func (r *Redical) Execute(line string) {
+	defer func() {
+		if r := recover(); r != nil {
+			glg.Warnf("Panic occured: %s... Recovering now", r)
+			fmt.Println(justifyOutput(emojiFor("fail"), fmt.Sprint(r)))
+		}
+	}()
 
-	switch cmds[0] {
-	case "SELECT":
-		if db, ok := ExtractInt(cmds, 1); ok {
-			return true, r.SwitchDB(db)
-		}
-	case "AUTH":
-		if pass, ok := SafeIndexStr(cmds, 1); ok {
-			return true, r.Authenticate(pass)
-		}
-	default:
-		return false, nil
+	if len(strings.TrimSpace(line)) == 0 {
+		return
 	}
-	glg.Warnf("Unexpected error occured in parsing command: %#v", cmds)
-	return true, fmt.Errorf("Unexpected error occured in parsing command")
+	cmds := strings.Fields(line)
+	if len(cmds) <= 0 {
+		handleError(fmt.Errorf("Unexpected error"))
+	}
+
+	if action, ok := actionMap[cmds[0]]; ok {
+		msg, err := action(r, cmds[0], cmds[1:]...)
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+		fmt.Println(msg)
+		return
+	}
+
+	// r.supported.Commands
+	if action, ok := actionMap["retType"]; ok {
+		msg, err := action(r, cmds[0], cmds[1:]...)
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+		fmt.Println(msg)
+		return
+	}
+	glg.Warnf("Could not get action from command or return type. Line: %s", line)
+}
+
+// selectAct is an instance of RedicalAction for SELECT call in Redis
+func selectAct(r *Redical, cmd string, params ...string) (msg string, err error) {
+	if db, ok := ExtractInt(params, 0); ok {
+		err = r.SwitchDB(db)
+		if err == nil {
+			msg = fmt.Sprint("Switched to DB %d", db)
+		}
+		return
+	}
+	return "", fmt.Errorf("Could not extract DB from params")
+}
+
+// selectAct is an instance of RedicalAction for AUTH call in Redis
+func authAct(r *Redical, cmd string, params ...string) (msg string, err error) {
+	if pass, ok := ExtractStr(params, 0); ok {
+		err = r.Authenticate(pass)
+		if err == nil {
+			msg = fmt.Sprint("Authentication successful")
+		}
+		return
+	}
+	return "", fmt.Errorf("Could not extract password from params")
 }
 
 func handleError(err error) {
 	stack := debug.Stack()
 	glg.Error("Error occured: %s at %s", err.Error(), string(stack))
 }
+
+func justifyOutput(emoji string, msg string) string {
+	return fmt.Sprintf("%2s %-4s %v", "", emoji, msg)
+}
+
+func (r *RedisDB) renderSimpleStringCommand(cmd string, params ...interface{}) string {
+	glg.Debugf("Executing %s with params %v", cmd, params)
+	reply, err := r.redisConn.Do(cmd, params...)
+	if err != nil {
+		return justifyOutput(emojiFor("fail"), err.Error())
+	}
+	switch r := reply.(type) {
+	case string:
+		return justifyOutput(emojiFor("success"), r)
+	default:
+		panic("Unexpected type of reply, expected string")
+	}
+}
+
+func (r *RedisDB) renderSimpleNumberCommand(cmd string, params ...interface{}) string {
+	glg.Debugf("Executing %s with params %v", cmd, params)
+	reply, err := r.redisConn.Do(cmd, params...)
+	if err != nil {
+		return justifyOutput(emojiFor("error"), err.Error())
+	}
+	switch r := reply.(type) {
+	case byte, int8, int16, int32, int64:
+		return justifyOutput(emojiFor("success"), fmt.Sprintf("%5d", r))
+	case float32, float64:
+		return justifyOutput(emojiFor("success"), fmt.Sprintf("%5f", r))
+	default:
+		panic("Unexpected type of reply, expected int or float")
+	}
+}
+
+// // aclLoad runs a ACL LOAD command on redis and responds back with the appropriate response.
+// func (r *RedisDB) aclLoad(cmd string, params ...string) (string, error) {
+// 	glg.Debug("Executing ACL SAVE, ignoring params")
+// 	reply, err := r.redisConn.Do(cmd)
+// 	if err != nil {
+// 		return "", err
+// 	}
+// 	return fmt.Sprint(reply), nil
+// }
+
+// // aclSave runs a ACL SAVE command on redis and responds back with the appropriate response.
+// func (r *RedisDB) aclSave(cmd string, params ...string) (string, error) {
+// 	glg.Debug("Executing ACL SAVE, ignoring params")
+// 	reply, err := r.redisConn.Do(cmd)
+// 	if err != nil {
+// 		return "", err
+// 	}
+// 	return fmt.Sprint(reply), nil
+// }
+
+// aclList runs a ACL LIST on redis and responds back with the ACL's set
+// func (r *RedisDB) aclList(cmd string, params ...string) (string, error) {
+
+// }
 
 // // PromptAction takes the command from the prompt and runs the command on redis
 // func PromptAction(cmd string) {
