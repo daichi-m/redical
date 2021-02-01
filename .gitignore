@@ -17,4 +17,5 @@
 redical
 .vscode/
 logs/
-coverage.txt
+coverage.*
+dist/

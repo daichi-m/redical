@@ -5,10 +5,10 @@ import (
 	"strings"
 
 	"github.com/daichi-m/go-prompt"
-	"github.com/kpango/glg"
+	"go.uber.org/zap"
 )
 
-var splitter *regexp.Regexp = regexp.MustCompile("\\s+")
+var splitter *regexp.Regexp = regexp.MustCompile(`\s+`)
 
 /*
 CmdSuggestions returns the list of suggestions based on the current input.
@@ -54,7 +54,7 @@ func filterMultiWord(filt []prompt.Suggest, full, current string, parts []string
 		modFilt = append(modFilt, sugg)
 	}
 	modFilt = prompt.FilterHasPrefix(modFilt, current, true)
-	glg.Debugf("Full Input: %s, Current Word: %s, Prefix: %s,"+
+	zap.S().Debugf("Full Input: %s, Current Word: %s, Prefix: %s,"+
 		"IsSpaced: %t, Filtered Suggestions: %#v",
 		full, current, prefix, spaced, modFilt)
 	return modFilt
@@ -66,7 +66,7 @@ func filterComplete(filt []prompt.Suggest, txt string) []prompt.Suggest {
 	}
 
 	filt1 := filt[0]
-	glg.Debugf("Suggestions: %#v, Full Text: %s", filt, txt)
+	zap.S().Debugf("Suggestions: %#v, Full Text: %s", filt, txt)
 	if filt1.Text == txt {
 		return []prompt.Suggest{}
 	}

@@ -6,8 +6,7 @@ import (
 
 	"github.com/daichi-m/go-prompt"
 	"github.com/fatih/color"
-	"github.com/hackebrot/turtle"
-	"github.com/kpango/glg"
+	"go.uber.org/zap"
 	lumberjack "gopkg.in/natefinch/lumberjack.v2"
 )
 
@@ -17,6 +16,11 @@ func main() {
 	// Setup logging
 	logFile, logger := SetupLogger()
 	defer logFile.Close()
+	defer func() {
+		_ = logger.Sync()
+	}()
+	undo := zap.ReplaceGlobals(logger)
+	defer undo()
 
 	banner()
 
@@ -28,7 +32,10 @@ func main() {
 	defer config.Close()
 
 	// Create redis connection
-	config.redisDB.InitializeRedis()
+	err = config.redisDB.InitializeRedis()
+	if err != nil {
+		zap.S().Warn("Redis connection not initialized, starting CLI without active redis")
+	}
 	defer config.redisDB.TearDownRedis()
 
 	// Initialize the set of emojis
@@ -42,7 +49,6 @@ func main() {
 
 // SetupPrompt sets up the CLI Prompt to run with proper prompt.CompletionManager and prompt.Executor
 func SetupPrompt(r *Redical) *prompt.Prompt {
-
 	p := prompt.New(r.Execute,
 		func(d prompt.Document) []prompt.Suggest {
 			/*cmds := r.supported.completions
@@ -78,7 +84,7 @@ func statusBar(buf *prompt.Buffer, comp *prompt.CompletionManager) (string, bool
 }
 
 // SetupLogger sets up the logging params
-func SetupLogger() (io.WriteCloser, *glg.Glg) {
+func SetupLogger() (io.WriteCloser, *zap.Logger) {
 	logFile := &lumberjack.Logger{
 		Filename:   "logs/redical.log",
 		MaxSize:    5, // megabytes
@@ -87,21 +93,16 @@ func SetupLogger() (io.WriteCloser, *glg.Glg) {
 		Compress:   true, // disabled by default
 		LocalTime:  false,
 	}
-	logger := glg.Get().
-		SetMode(glg.WRITER).
-		InitWriter().
-		AddWriter(logFile).
-		// AddLevelWriter(glg.DEBG, logFile).
-		// AddLevelWriter(glg.INFO, logFile).
-		// AddLevelWriter(glg.WARN, logFile).
-		// AddLevelWriter(glg.ERR, logFile).
-		DisableJSON().
-		DisableColor()
+	logger, err := zap.NewDevelopmentConfig().Build(zap.IncreaseLevel(zap.DebugLevel))
+	if err != nil {
+		panic("Could not initialize logger")
+	}
 	return logFile, logger
 }
 
+/*
 func statusBarPrefSuf() (string, string) {
 	smile := turtle.Search("smile")[0]
 	rocket := turtle.Search("rocket")[0]
 	return smile.Char, rocket.Char
-}
+}*/

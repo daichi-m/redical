@@ -7,7 +7,7 @@ import (
 
 	"github.com/daichi-m/go-prompt"
 	"github.com/daichi-m/redical/assets"
-	"github.com/kpango/glg"
+	"go.uber.org/zap"
 )
 
 // TODO: Better documentation comments
@@ -156,6 +156,6 @@ func InitCmds() (*CommandList, error) {
 			logs.WriteString("\n")
 		}
 	}
-	glg.Debug("Commands read in \n", logs.String())
+	zap.S().Debugw("Commands read in", "line", logs.String())
 	return &cmds, nil
 }

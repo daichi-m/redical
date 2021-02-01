@@ -1,17 +1,6 @@
 package main
 
-import (
-	"encoding/base64"
-	"fmt"
-	"reflect"
-	"strings"
-	"unicode/utf8"
-
-	"github.com/fatih/color"
-	"github.com/hackebrot/turtle"
-	"github.com/kpango/glg"
-)
-
+/*
 // render will render the reply from redis into a human friendly format with RT latency
 func render(reply interface{}) string {
 	defer func() {
@@ -123,4 +112,4 @@ func printWithEmoji(em string, data interface{}) {
 	}
 
 	fmt.Printf("%s  %v\n", emChar, data)
-}
+}*/

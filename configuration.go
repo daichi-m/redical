@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/kpango/glg"
+	"go.uber.org/zap"
 )
 
 // Redical is the global configuration struct to encapsulate all global parameters
@@ -41,7 +41,7 @@ func (r *Redical) modifyConfig(mod *DBConfig) error {
 		r.redisDB = tmp
 		return err
 	}
-	glg.Info("Redis client re-initialized with modified config %v", mod)
+	zap.S().Infof("Redis client re-initialized with modified config %v", mod)
 	return nil
 }
 

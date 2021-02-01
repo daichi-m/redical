@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/gomodule/redigo/redis"
-	"github.com/kpango/glg"
 	flag "github.com/spf13/pflag"
+	"go.uber.org/zap"
 )
 
 // DBConfig is the struct that encapsulates the user inputs
@@ -124,7 +124,7 @@ func (db *RedisDB) createDialOpts() []redis.DialOption {
 	if len(db.client) > 0 {
 		dialOpts = append(dialOpts, redis.DialClientName(db.client))
 	}
-	glg.Info("Create redis with options: %v", db)
+	zap.S().Infow("Create redis with options", "options", db)
 	return dialOpts
 }
 
@@ -134,7 +134,7 @@ picks up all the non-zero values from other and assigns them to the
 corresponding field in this DBConfig object
 */
 func (db *DBConfig) Merge(other *DBConfig) {
-	glg.Debug("Request to merge config: %v", other)
+	zap.S().Debugf("Request to merge config: %v", other)
 
 	if other.host != "" {
 		db.host = other.host
@@ -169,13 +169,13 @@ func (db *DBConfig) Merge(other *DBConfig) {
 	if other.keepAliveTO != 0 {
 		db.keepAliveTO = other.keepAliveTO
 	}
-	if other.tls == true {
+	if other.tls {
 		db.tls = true
 	}
-	if other.skipVerifyTLS == true {
+	if other.skipVerifyTLS {
 		db.skipVerifyTLS = true
 	}
-	glg.Info("Merged DBConfig: %v", db)
+	zap.S().Infof("Merged DBConfig: %v", db)
 }
 
 func (db *DBConfig) String() string {

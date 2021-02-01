@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
-	"runtime/debug"
 	"strings"
 
-	"github.com/kpango/glg"
+	"go.uber.org/zap"
 )
 
 // RedicalAction is the template function type for executing a command on Redis.
@@ -66,7 +65,7 @@ func (r *Redical) Errorln(err error) {
 func (r *Redical) Execute(line string) {
 	defer func() {
 		if rec := recover(); r != nil {
-			glg.Warnf("Panic occured: %s... Recovering now", rec)
+			zap.S().Warnw("Panic occured...Recovering now", "panic", rec)
 			r.Errorln(fmt.Errorf("%v", rec))
 		}
 	}()
@@ -78,16 +77,16 @@ func (r *Redical) Execute(line string) {
 	if err != nil {
 		r.Errorln(err)
 	}
-	glg.Debugf("Command inferred %s with params: %v", cmd, params)
+	zap.S().Debugw("Inferred details", "command", cmd, "params", params)
 
 	if action, ok := actionMap[cmd]; ok {
 		output, err := action(r, cmd, params...)
 		if err != nil {
 			r.Errorln(err)
-			glg.Warn("Error in execution", err.Error())
+			zap.S().Warnw("Error in execution", "error", err.Error())
 			return
 		}
-		glg.Debugf("Output produced: %s", output)
+		zap.S().Debugw("Output produced", "output", output)
 		r.Println(output)
 		return
 	}
@@ -98,19 +97,22 @@ func (r *Redical) Execute(line string) {
 		return
 	}
 
+	r.redisDB.renderSimpleNumberCommand(cmd, strIntfConvert(params)...)
+	r.redisDB.renderSimpleStringCommand(cmd, strIntfConvert(params)...)
+
 	retType := command.Return
 	if action, ok := actionMap[retType]; ok {
 		output, err := action(r, cmd, params...)
 		if err != nil {
 			r.Errorln(err)
-			glg.Error("Error in execution", err.Error())
+			zap.S().Errorw("Error in execution", "error", err)
 			return
 		}
-		glg.Debugf("Output produced: %s", output)
+		zap.S().Debugw("Output produced", "output", output)
 		r.Println(output)
 		return
 	}
-	glg.Warnf("Could not get action from command or return type. Line: %s", line)
+	zap.S().Warnw("Could not get action from command or return type.", "line", line)
 }
 
 // selectAct is an instance of RedicalAction for SELECT call in Redis
@@ -130,24 +132,24 @@ func authAct(r *Redical, cmd string, params ...string) (msg string, err error) {
 	if pass, ok := ExtractStr(params, 0); ok {
 		err = r.Authenticate(pass)
 		if err == nil {
-			msg = fmt.Sprint("Authentication successful")
+			msg = "Authentication successful"
 		}
 		return
 	}
 	return "", fmt.Errorf("Could not extract password from params")
 }
 
-func handleError(err error) {
-	stack := debug.Stack()
-	glg.Error("Error occured: %s at %s", err.Error(), string(stack))
-}
+// func handleError(err error) {
+// 	stack := debug.Stack()
+// 	glg.Error("Error occured: %s at %s", err.Error(), string(stack))
+// }
 
 func justifyOutput(emoji string, msg string) string {
 	return fmt.Sprintf("%2s %-4s %v", "", emoji, msg)
 }
 
 func (r *RedisDB) renderSimpleStringCommand(cmd string, params ...interface{}) string {
-	glg.Debugf("Executing %s with params %v", cmd, params)
+	zap.S().Debugw("Execution context", "command", cmd, "params", params)
 	reply, err := r.redisConn.Do(cmd, params...)
 	if err != nil {
 		return justifyOutput(emojiFor("fail"), err.Error())
@@ -161,7 +163,7 @@ func (r *RedisDB) renderSimpleStringCommand(cmd string, params ...interface{}) s
 }
 
 func (r *RedisDB) renderSimpleNumberCommand(cmd string, params ...interface{}) string {
-	glg.Debugf("Executing %s with params %v", cmd, params)
+	zap.S().Debugw("Execution context", "command", cmd, "params", params)
 	reply, err := r.redisConn.Do(cmd, params...)
 	if err != nil {
 		return justifyOutput(emojiFor("error"), err.Error())
