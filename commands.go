@@ -141,7 +141,10 @@ func InitCmds() (*CommandList, error) {
 		return nil, err
 	}
 
+	cmds.kwCmd = make(map[string]*Command, len(cmds.Commands))
+	cmds.multikey = make(map[string]bool, len(cmds.Commands))
 	for i := range cmds.Commands {
+		zap.S().Debugf("Command: %v", cmds.Commands[i])
 		cmds.Commands[i].InitSuggest()
 		cmds.kwCmd[cmds.Commands[i].Name] = &(cmds.Commands[i])
 		if strings.Contains(cmds.Commands[i].Name, " ") {
@@ -149,13 +152,9 @@ func InitCmds() (*CommandList, error) {
 			cmds.multikey[first] = true
 		}
 	}
-	logs := new(strings.Builder)
-	for i, c := range cmds.Commands {
-		logs.WriteString(fmt.Sprint(c))
-		if i <= len(cmds.Commands)-1 {
-			logs.WriteString("\n")
-		}
+
+	for _, c := range cmds.Commands {
+		zap.S().Debugf("Command: %v", c)
 	}
-	zap.S().Debugw("Commands read in", "line", logs.String())
 	return &cmds, nil
 }

@@ -2,20 +2,17 @@ package main
 
 import (
 	"fmt"
-	"io"
 
 	"github.com/daichi-m/go-prompt"
 	"github.com/fatih/color"
 	"go.uber.org/zap"
-	lumberjack "gopkg.in/natefinch/lumberjack.v2"
 )
 
 // // global is the global RedicalConf object to store all global parameters
 // var global RedicalConf
 func main() {
 	// Setup logging
-	logFile, logger := SetupLogger()
-	defer logFile.Close()
+	logger := SetupLogger()
 	defer func() {
 		_ = logger.Sync()
 	}()
@@ -84,20 +81,14 @@ func statusBar(buf *prompt.Buffer, comp *prompt.CompletionManager) (string, bool
 }
 
 // SetupLogger sets up the logging params
-func SetupLogger() (io.WriteCloser, *zap.Logger) {
-	logFile := &lumberjack.Logger{
-		Filename:   "logs/redical.log",
-		MaxSize:    5, // megabytes
-		MaxBackups: 3,
-		MaxAge:     2,    // days
-		Compress:   true, // disabled by default
-		LocalTime:  false,
-	}
-	logger, err := zap.NewDevelopmentConfig().Build(zap.IncreaseLevel(zap.DebugLevel))
+func SetupLogger() *zap.Logger {
+	conf := zap.NewDevelopmentConfig()
+	conf.OutputPaths = []string{"logs/redical.log"}
+	logger, err := conf.Build(zap.AddStacktrace(zap.ErrorLevel), zap.IncreaseLevel(zap.DebugLevel))
 	if err != nil {
 		panic("Could not initialize logger")
 	}
-	return logFile, logger
+	return logger
 }
 
 /*

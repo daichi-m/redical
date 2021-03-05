@@ -27,7 +27,7 @@ generate: ## go generate
 .PHONY: build
 build: ## go build
 	$(call print-target)
-	go build -o /dev/null ./...
+	go build -o . ./...
 
 .PHONY: fmt
 fmt: ## go fmt

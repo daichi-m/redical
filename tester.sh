@@ -1,9 +1,12 @@
 #!/bin/bash
-set -e
+set -x
 
 GO=$(which go)
 DOCKER=$(which docker)
 GO_PROMPT_ENABLE_LOG="true"
+
+# Clean up previous build
+make clean
 
 # Start the redis container
 echo -n "Starting redis container...."

@@ -97,8 +97,8 @@ func (r *Redical) Execute(line string) {
 		return
 	}
 
-	r.redisDB.renderSimpleNumberCommand(cmd, strIntfConvert(params)...)
-	r.redisDB.renderSimpleStringCommand(cmd, strIntfConvert(params)...)
+	simpleNumberAction(r, cmd, strIntfConvert(params)...)
+	simpleStringAction(r, cmd, strIntfConvert(params)...)
 
 	retType := command.Return
 	if action, ok := actionMap[retType]; ok {
@@ -116,25 +116,27 @@ func (r *Redical) Execute(line string) {
 }
 
 // selectAct is an instance of RedicalAction for SELECT call in Redis
-func selectAct(r *Redical, cmd string, params ...string) (msg string, err error) {
+func selectAct(r *Redical, cmd string, params ...string) (string, error) {
+	var msg string
 	if db, ok := ExtractInt(params, 0); ok {
-		err = r.SwitchDB(db)
+		err := r.SwitchDB(db)
 		if err == nil {
 			msg = fmt.Sprintf("Switched to DB %d", db)
 		}
-		return
+		return msg, err
 	}
 	return "", fmt.Errorf("Could not extract DB from params")
 }
 
 // selectAct is an instance of RedicalAction for AUTH call in Redis
-func authAct(r *Redical, cmd string, params ...string) (msg string, err error) {
+func authAct(r *Redical, cmd string, params ...string) (string, error) {
+	var msg string
 	if pass, ok := ExtractStr(params, 0); ok {
-		err = r.Authenticate(pass)
+		err := r.Authenticate(pass)
 		if err == nil {
 			msg = "Authentication successful"
 		}
-		return
+		return msg, err
 	}
 	return "", fmt.Errorf("Could not extract password from params")
 }
@@ -144,35 +146,35 @@ func authAct(r *Redical, cmd string, params ...string) (msg string, err error) {
 // 	glg.Error("Error occured: %s at %s", err.Error(), string(stack))
 // }
 
-func justifyOutput(emoji string, msg string) string {
-	return fmt.Sprintf("%2s %-4s %v", "", emoji, msg)
-}
+// func justifyOutput(emoji string, msg string) string {
+// 	return fmt.Sprintf("%2s %-4s %v", "", emoji, msg)
+// }
 
-func (r *RedisDB) renderSimpleStringCommand(cmd string, params ...interface{}) string {
+func simpleStringAction(r *Redical, cmd string, params ...interface{}) (string, error) {
 	zap.S().Debugw("Execution context", "command", cmd, "params", params)
-	reply, err := r.redisConn.Do(cmd, params...)
+	reply, err := r.redisDB.redisConn.Do(cmd, params...)
 	if err != nil {
-		return justifyOutput(emojiFor("fail"), err.Error())
+		return "", err
 	}
 	switch r := reply.(type) {
 	case string:
-		return justifyOutput(emojiFor("success"), r)
+		return r, err
 	default:
 		panic("Unexpected type of reply, expected string")
 	}
 }
 
-func (r *RedisDB) renderSimpleNumberCommand(cmd string, params ...interface{}) string {
+func simpleNumberAction(r *Redical, cmd string, params ...interface{}) (string, error) {
 	zap.S().Debugw("Execution context", "command", cmd, "params", params)
-	reply, err := r.redisConn.Do(cmd, params...)
+	reply, err := r.redisDB.redisConn.Do(cmd, params...)
 	if err != nil {
-		return justifyOutput(emojiFor("error"), err.Error())
+		return "", err
 	}
 	switch r := reply.(type) {
 	case byte, int8, int16, int32, int64:
-		return justifyOutput(emojiFor("success"), fmt.Sprintf("%5d", r))
+		return fmt.Sprintf("%5d", r), nil
 	case float32, float64:
-		return justifyOutput(emojiFor("success"), fmt.Sprintf("%5f", r))
+		return fmt.Sprintf("%5f", r), nil
 	default:
 		panic("Unexpected type of reply, expected int or float")
 	}
