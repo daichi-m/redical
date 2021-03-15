@@ -5,10 +5,14 @@ import (
 	"fmt"
 	"strings"
 
+	_ "embed"
+
 	"github.com/daichi-m/go-prompt"
-	"github.com/daichi-m/redical/assets"
 	"go.uber.org/zap"
 )
+
+//go:embed resources/commands-golangcompat.json
+var data []byte
 
 // TODO: Better documentation comments
 
@@ -21,6 +25,7 @@ type Argument struct {
 	Multiple bool     `json:"multiple,omitempty"`
 }
 
+// String gives the string representation of the args
 func (arg *Argument) String() string {
 	var sb strings.Builder
 	if len(arg.Command) != 0 {
@@ -54,6 +59,7 @@ type Command struct {
 	suggest   prompt.Suggest
 }
 
+// String gives the string representation of the redis command.
 func (c *Command) String() string {
 	var sb strings.Builder
 	sb.WriteString(c.Name)
@@ -92,9 +98,10 @@ type CommandList struct {
 	multikey map[string]bool
 }
 
-// Keywords gets the list of keywords for this command list
+// Keywords gets the list of keywords for this command list. This is an O(n) call,
+// so client should be careful about calling this multiple times.
 func (cl *CommandList) Keywords() []string {
-	kw := make([]string, 0)
+	kw := make([]string, 0, len(cl.kwCmd))
 	for x := range cl.kwCmd {
 		xs := strings.Fields(x)
 		kw = append(kw, xs...)
@@ -132,12 +139,8 @@ func (cl *CommandList) extractCommand(line string) (cmd string, params []string,
 
 // InitCmds initializes the list of redis commands supported by redical
 func InitCmds() (*CommandList, error) {
-	data, err := assets.Asset("resources/commands-golangcompat.json")
-	if err != nil {
-		return nil, err
-	}
 	var cmds CommandList
-	if err = json.Unmarshal(data, &(cmds.Commands)); err != nil {
+	if err := json.Unmarshal(data, &(cmds.Commands)); err != nil {
 		return nil, err
 	}
 

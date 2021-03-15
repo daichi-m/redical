@@ -6,7 +6,7 @@ dev: clean install generate build fmt lint test mod-tidy build-snapshot
 
 .PHONY: ci
 ci: ## CI build
-ci: dev
+ci: dev diff
 
 .PHONY: clean
 clean: ## remove files created during build
@@ -27,7 +27,7 @@ generate: ## go generate
 .PHONY: build
 build: ## go build
 	$(call print-target)
-	go build -o . ./...
+	go build -o /dev/null ./...
 
 .PHONY: fmt
 fmt: ## go fmt

@@ -27,6 +27,7 @@ func (r *Redical) initEmojis() {
 	actionMap["AUTH"] = authAct
 }
 
+// TODO: Delete if not required!
 func emojiFor(key string) string {
 	if e, ok := emojis[key]; ok {
 		return e
