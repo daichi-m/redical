@@ -26,5 +26,5 @@ jobs:
         with:
           # Required: the version of golangci-lint is required and must be specified without patch version: we always use the latest patch version.
           version: v1.36
-          args: --issues-exit-code=0 --concurrency 8 --enable bodyclose,funlen,godot,lll,misspell,unparam
+          args: --issues-exit-code=1 --concurrency 8 --enable bodyclose,funlen,godot,lll,misspell,unparam
           only-new-issues: true
