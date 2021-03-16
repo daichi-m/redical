@@ -16,16 +16,16 @@ var data []byte
 
 // TODO: Better documentation comments
 
-// Argument are the args that a redis command can take
+// Argument are the args that a redis command can take.
 type Argument struct {
 	Command  string   `json:"command,omitempty"`
 	Name     []string `json:"name,omitempty"`
-	Optional bool     `json:"optional,omitempty"`
 	Enum     []string `json:"enum,omitempty"`
+	Optional bool     `json:"optional,omitempty"`
 	Multiple bool     `json:"multiple,omitempty"`
 }
 
-// String gives the string representation of the args
+// String gives the string representation of the args.
 func (arg *Argument) String() string {
 	var sb strings.Builder
 	if len(arg.Command) != 0 {
@@ -50,7 +50,7 @@ func (arg *Argument) String() string {
 	return s
 }
 
-// Command encapsulates a single redis command instance
+// Command encapsulates a single redis command instance.
 type Command struct {
 	Arguments []Argument `json:"arguments"`
 	Name      string     `json:"name"`
@@ -77,7 +77,7 @@ func (c *Command) String() string {
 	return sb.String()
 }
 
-// InitSuggest returns a promt.InitSuggest object for a RedisCommand
+// InitSuggest returns a promt.InitSuggest object for a RedisCommand.
 func (c *Command) InitSuggest() prompt.Suggest {
 	var args strings.Builder
 	for _, a := range c.Arguments {
@@ -91,7 +91,7 @@ func (c *Command) InitSuggest() prompt.Suggest {
 	return c.suggest
 }
 
-// CommandList is the list of redis commands supported by redical
+// CommandList is the list of redis commands supported by redical.
 type CommandList struct {
 	Commands []Command `json:"redisCommands"`
 	kwCmd    map[string]*Command
@@ -109,7 +109,7 @@ func (cl *CommandList) Keywords() []string {
 	return kw
 }
 
-// extractCommand extracts the command and the params from a given line string
+// extractCommand extracts the command and the params from a given line string.
 func (cl *CommandList) extractCommand(line string) (cmd string, params []string, err error) {
 	parts := strings.Fields(line)
 	l := len(parts)
@@ -137,7 +137,7 @@ func (cl *CommandList) extractCommand(line string) (cmd string, params []string,
 	return
 }
 
-// InitCmds initializes the list of redis commands supported by redical
+// InitCmds initializes the list of redis commands supported by redical.
 func InitCmds() (*CommandList, error) {
 	var cmds CommandList
 	if err := json.Unmarshal(data, &(cmds.Commands)); err != nil {

@@ -10,7 +10,7 @@ import (
 	"go.uber.org/zap"
 )
 
-// DBConfig is the struct that encapsulates the user inputs
+// DBConfig is the struct that encapsulates the user inputs.
 type DBConfig struct {
 	host     string
 	username string
@@ -31,13 +31,13 @@ type DBConfig struct {
 	prod          bool
 }
 
-// RedisDB is an instance of redis database
+// RedisDB is an instance of redis database.
 type RedisDB struct {
 	DBConfig
 	redisConn redis.Conn
 }
 
-// ParseConfig parses the input flags and initializes the global Input struct
+// ParseConfig parses the input flags and initializes the global Input struct.
 func ParseConfig() DBConfig {
 	host := flag.StringP("host", "h", "localhost", "Hostname of the redis instance")
 	port := flag.IntP("port", "p", 6379, "Port of the redis instance")
@@ -82,7 +82,7 @@ func ParseConfig() DBConfig {
 
 /*
 InitializeRedis initializes the redigo/redis client at startup based on the CLI
-inputs in the DBConfig
+inputs in the DBConfig.
 */
 func (db *RedisDB) InitializeRedis() error {
 	dialOpts := db.createDialOpts()
@@ -95,7 +95,7 @@ func (db *RedisDB) InitializeRedis() error {
 	return nil
 }
 
-// TearDownRedis tears down the redis connection
+// TearDownRedis tears down the redis connection.
 func (db *RedisDB) TearDownRedis() {
 	if db.redisConn != nil {
 		db.redisConn.Close()
@@ -131,7 +131,7 @@ func (db *RedisDB) createDialOpts() []redis.DialOption {
 /*
 Merge this instance of DBConfig with another DBConfig. This function
 picks up all the non-zero values from other and assigns them to the
-corresponding field in this DBConfig object
+corresponding field in this DBConfig object.
 */
 func (db *DBConfig) Merge(other *DBConfig) {
 	zap.S().Debugf("Request to merge config: %v", other)

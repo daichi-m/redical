@@ -6,18 +6,18 @@ import (
 	"go.uber.org/zap"
 )
 
-// Redical is the global configuration struct to encapsulate all global parameters
+// Redical is the global configuration struct to encapsulate all global parameters.
 type Redical struct {
 	redisDB   *RedisDB
 	supported *CommandList
 }
 
-// SwitchDB switches the underlying RedisDB of RedicalConf to use the new DB number
+// SwitchDB switches the underlying RedisDB of RedicalConf to use the new DB number.
 func (r *Redical) SwitchDB(db int) error {
 	return r.modifyConfig(&DBConfig{database: db})
 }
 
-// Authenticate authenticates the underlying RedisDB of RedicalConf with the password
+// Authenticate authenticates the underlying RedisDB of RedicalConf with the password.
 func (r *Redical) Authenticate(pass string) error {
 	return r.modifyConfig(&DBConfig{password: pass})
 }
@@ -45,7 +45,7 @@ func (r *Redical) modifyConfig(mod *DBConfig) error {
 	return nil
 }
 
-// PromptPrefix returns the prefix to be displayed in the prompt for this RedicalConf
+// PromptPrefix returns the prefix to be displayed in the prompt for this RedicalConf.
 func (r *Redical) PromptPrefix() string {
 	var serv string
 	if r.redisDB.redisConn == nil {
@@ -56,12 +56,12 @@ func (r *Redical) PromptPrefix() string {
 	return fmt.Sprintf("[%s] >>> ", serv)
 }
 
-// Close closes the RedisConnection associated with this RedicalConf
+// Close closes the RedisConnection associated with this RedicalConf.
 func (r *Redical) Close() {
 	r.redisDB.TearDownRedis()
 }
 
-// InitializeRedical creates an instance of RedicalConf that is being used across the system
+// InitializeRedical creates an instance of RedicalConf that is being used across the system.
 func InitializeRedical() (*Redical, error) {
 	db := ParseConfig()
 	supp, err := InitCmds()

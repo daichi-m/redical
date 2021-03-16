@@ -4,7 +4,7 @@ import (
 	"strconv"
 )
 
-// ExtractInt extracts an integer value from a given string slice at an index
+// ExtractInt extracts an integer value from a given string slice at an index.
 func ExtractInt(arr []string, i int) (int, bool) {
 	if len(arr) <= i {
 		return 0, false

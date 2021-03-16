@@ -9,7 +9,7 @@ import (
 )
 
 // // global is the global RedicalConf object to store all global parameters
-// var global RedicalConf
+// var global RedicalConf.
 func main() {
 	// Setup logging
 	logger := SetupLogger()
@@ -44,7 +44,7 @@ func main() {
 	p.Run()
 }
 
-// SetupPrompt sets up the CLI Prompt to run with proper prompt.CompletionManager and prompt.Executor
+// SetupPrompt sets up the CLI Prompt to run with proper prompt.CompletionManager and prompt.Executor.
 func SetupPrompt(r *Redical) *prompt.Prompt {
 	p := prompt.New(r.Execute,
 		func(d prompt.Document) []prompt.Suggest {
@@ -80,7 +80,7 @@ func statusBar(buf *prompt.Buffer, comp *prompt.CompletionManager) (string, bool
 	return "All systems go", true
 }
 
-// SetupLogger sets up the logging params
+// SetupLogger sets up the logging params.
 func SetupLogger() *zap.Logger {
 	conf := zap.NewDevelopmentConfig()
 	conf.OutputPaths = []string{"logs/redical.log"}

@@ -62,7 +62,7 @@ func (r *Redical) Errorln(err error) {
 	fmt.Printf("%4s %s \n", "🛑", err.Error())
 }
 
-// Execute executes the given command in cmd with the RedicalConf
+// Execute executes the given command in cmd with the RedicalConf.
 func (r *Redical) Execute(line string) {
 	defer func() {
 		if rec := recover(); r != nil {
@@ -116,7 +116,7 @@ func (r *Redical) Execute(line string) {
 	zap.S().Warnw("Could not get action from command or return type.", "line", line)
 }
 
-// selectAct is an instance of RedicalAction for SELECT call in Redis
+// selectAct is an instance of RedicalAction for SELECT call in Redis.
 func selectAct(r *Redical, cmd string, params ...string) (string, error) {
 	var msg string
 	if db, ok := ExtractInt(params, 0); ok {
@@ -129,7 +129,7 @@ func selectAct(r *Redical, cmd string, params ...string) (string, error) {
 	return "", fmt.Errorf("Could not extract DB from params")
 }
 
-// selectAct is an instance of RedicalAction for AUTH call in Redis
+// selectAct is an instance of RedicalAction for AUTH call in Redis.
 func authAct(r *Redical, cmd string, params ...string) (string, error) {
 	var msg string
 	if pass, ok := ExtractStr(params, 0); ok {
@@ -144,7 +144,7 @@ func authAct(r *Redical, cmd string, params ...string) (string, error) {
 
 // func handleError(err error) {
 // 	stack := debug.Stack()
-// 	glg.Error("Error occured: %s at %s", err.Error(), string(stack))
+// 	glg.Error("Error occurred: %s at %s", err.Error(), string(stack))
 // }
 
 // func justifyOutput(emoji string, msg string) string {
